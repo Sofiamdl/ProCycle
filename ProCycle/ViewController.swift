@@ -5,14 +5,20 @@
 //  Created by sml on 23/05/23.
 //
 
-import UIKit
+import Cocoa
 
-class ViewController: UIViewController {
+class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.view.backgroundColor = .red
+
         // Do any additional setup after loading the view.
+    }
+
+    override var representedObject: Any? {
+        didSet {
+        // Update the view, if already loaded.
+        }
     }
 
 
