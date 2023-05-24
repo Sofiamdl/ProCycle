@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SliderCell: View {
     @State var day: SliderCellModel
+    @StateObject private var viewModel = SliderCellViewModel()
     
     var body: some View {
         VStack {
+            Text(viewModel.getDayOfTheWeek(date: day.day))
             ZStack (alignment: .top) {
                 Capsule()
                     .fill(.white)
@@ -30,19 +32,10 @@ struct SliderCell: View {
                 }
                 
             }
-            Text(getDate())
+            Text(viewModel.getDate(date: day.day))
         }
         .frame(height: 100)
 
-    }
-    
-    func getDate()-> String{
-        let df = DateFormatter()
-        df.dateStyle = DateFormatter.Style.medium
-        df.timeStyle = DateFormatter.Style.medium
-        let date = (df.string(from: day.day))
-
-        return String(date.prefix(6))
     }
     
 }
