@@ -11,6 +11,11 @@
 		BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E972A1E83D60098BC6E /* ContentView.swift */; };
 		BF977E9A2A1E83D70098BC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF977E992A1E83D70098BC6E /* Assets.xcassets */; };
 		BF977E9D2A1E83D70098BC6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF977E9C2A1E83D70098BC6E /* Preview Assets.xcassets */; };
+		BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EA52A1E86B00098BC6E /* Slider.swift */; };
+		BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EA82A1E877A0098BC6E /* SliderCell.swift */; };
+		BF977EAB2A1E89560098BC6E /* Teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EAA2A1E89560098BC6E /* Teste.swift */; };
+		BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */; };
+		BF977EAF2A1E94EC0098BC6E /* SliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EAE2A1E94EC0098BC6E /* SliderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		BF977E992A1E83D70098BC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF977E9C2A1E83D70098BC6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF977E9E2A1E83D70098BC6E /* ProCycle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProCycle.entitlements; sourceTree = "<group>"; };
+		BF977EA52A1E86B00098BC6E /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Slider.swift; path = ProCycle/Components/Slider/Slider.swift; sourceTree = SOURCE_ROOT; };
+		BF977EA82A1E877A0098BC6E /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		BF977EAA2A1E89560098BC6E /* Teste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teste.swift; sourceTree = "<group>"; };
+		BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCellModel.swift; sourceTree = "<group>"; };
+		BF977EAE2A1E94EC0098BC6E /* SliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,7 @@
 		BF977E942A1E83D60098BC6E /* ProCycle */ = {
 			isa = PBXGroup;
 			children = (
+				BF977EA42A1E86A10098BC6E /* Components */,
 				BF977E952A1E83D60098BC6E /* ProCycleApp.swift */,
 				BF977E972A1E83D60098BC6E /* ContentView.swift */,
 				BF977E992A1E83D70098BC6E /* Assets.xcassets */,
@@ -67,6 +78,26 @@
 				BF977E9C2A1E83D70098BC6E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF977EA42A1E86A10098BC6E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BF977EA72A1E87560098BC6E /* Slider */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BF977EA72A1E87560098BC6E /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				BF977EA52A1E86B00098BC6E /* Slider.swift */,
+				BF977EAE2A1E94EC0098BC6E /* SliderViewModel.swift */,
+				BF977EA82A1E877A0098BC6E /* SliderCell.swift */,
+				BF977EAA2A1E89560098BC6E /* Teste.swift */,
+				BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */,
+			);
+			path = Slider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */,
 				BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */,
+				BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */,
+				BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */,
+				BF977EAB2A1E89560098BC6E /* Teste.swift in Sources */,
+				BF977EAF2A1E94EC0098BC6E /* SliderViewModel.swift in Sources */,
 				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,11 +302,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProCycle/ProCycle.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProCycle/Preview Content\"";
-				DEVELOPMENT_TEAM = M3SKJK6V42;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -282,6 +319,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studies.s.ProCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -293,11 +331,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProCycle/ProCycle.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProCycle/Preview Content\"";
-				DEVELOPMENT_TEAM = M3SKJK6V42;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -309,6 +348,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studies.s.ProCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
