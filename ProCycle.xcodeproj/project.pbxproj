@@ -16,6 +16,7 @@
 		BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */; };
 		BF977EAF2A1E94EC0098BC6E /* SliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EAE2A1E94EC0098BC6E /* SliderViewModel.swift */; };
 		BF977EB12A1EA8880098BC6E /* SliderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB02A1EA8880098BC6E /* SliderCellViewModel.swift */; };
+		BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCellModel.swift; sourceTree = "<group>"; };
 		BF977EAE2A1E94EC0098BC6E /* SliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewModel.swift; sourceTree = "<group>"; };
 		BF977EB02A1EA8880098BC6E /* SliderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCellViewModel.swift; sourceTree = "<group>"; };
+		BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		BF977EA72A1E87560098BC6E /* Slider */ = {
 			isa = PBXGroup;
 			children = (
+				BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */,
 				BF977EA52A1E86B00098BC6E /* Slider.swift */,
 				BF977EAE2A1E94EC0098BC6E /* SliderViewModel.swift */,
 				BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */,
@@ -172,6 +175,7 @@
 			files = (
 				BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */,
 				BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */,
+				BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */,
 				BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */,
 				BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */,
 				BF977EB12A1EA8880098BC6E /* SliderCellViewModel.swift in Sources */,
@@ -311,6 +315,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +345,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
