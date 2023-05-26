@@ -9,40 +9,52 @@ import EventKit
 import SwiftUI
 
 class CalendarViewModel: ObservableObject {
-
+    
     var eventStore = EKEventStore()
     @Published var events: [EKEvent] = []
     @Published var calendar: EKCalendar?
-
+    
     init() {
         requestAccessToCalendar()
         self.calendar = addCalendar()
     }
-
+    
     func requestAccessToCalendar() {
         eventStore.requestAccess(to: .event) { success, error in
             print(success)
         }
     }
-
+    
     func bestPossibleEKSource() -> EKSource? {
         let `default` = eventStore.defaultCalendarForNewEvents?.source
         let iCloud = eventStore.sources.first(where: { $0.title == "iCloud" }) // this is fragile, user can rename the source
         let local = eventStore.sources.first(where: { $0.sourceType == .local })
         return `default` ?? iCloud ?? local
     }
-
+    
     func addCalendar() -> EKCalendar {
+        let calendars = eventStore.calendars(for: .event)
+        let cicleCalendar = calendars.filter { calendar in
+            return calendar.title == "Cicle"
+        }
+        if cicleCalendar.count != 0 {
+            return cicleCalendar[0]
+        } else {
+            return newCalendar()
+        }
+    }
+    
+    func newCalendar() -> EKCalendar {
         let calendar = EKCalendar(for: .event, eventStore: self.eventStore)
-            calendar.title = "Cicle"
+        calendar.title = "Cicle"
         guard let source = self.bestPossibleEKSource() else {
-               return EKCalendar()
-           }
-           calendar.source = source
+            return EKCalendar()
+        }
+        calendar.source = source
         try! self.eventStore.saveCalendar(calendar, commit: true)
         return calendar
     }
-
+    
     func adjustCalendar(menstruationDate: Date) {
         if let calendar = self.calendar {
             let monthsAfter = Date(timeIntervalSinceNow: 100*24*3600)
@@ -51,11 +63,22 @@ class CalendarViewModel: ObservableObject {
             let events = eventStore.events(matching: predicate)
             
             for event in events {
-                print(event)
+                removeEvent(eventId: event.calendarItemIdentifier)
             }
         }
     }
-
+    
+    func removeEvent(eventId: String) {
+        if let eventToDelete = self.eventStore.event(withIdentifier: eventId){
+            do {
+                try eventStore.remove(eventToDelete, span: .thisEvent)
+            } catch let error as NSError {
+                print("failed to save event with error : \(error)")
+            }
+            print("removed Event")
+        }
+    }
+    
     func todaysEvents() {
         DispatchQueue.main.async {
             let newEvent = EKEvent(eventStore: self.eventStore)
@@ -66,9 +89,9 @@ class CalendarViewModel: ObservableObject {
             
             do {
                 try self.eventStore.save(newEvent, span: .thisEvent)
-              } catch let error as NSError {
-                  print("failed to save event with error : \(error)")
-              }
+            } catch let error as NSError {
+                print("failed to save event with error : \(error)")
+            }
             
         }
     }
