@@ -10,7 +10,7 @@ import SwiftUI
 struct Slider: View {
     @StateObject private var viewModel = SliderViewModel()
     @State private var scrollPosition: CGPoint = .zero
-    @StateObject private var calendarViewModel = CalendarViewModel()
+    @EnvironmentObject var calendar: CalendarViewModel
 
     var body: some View {
         ScrollViewReader { value in
@@ -36,7 +36,7 @@ struct Slider: View {
             }
             .coordinateSpace(name: "scroll")
             .onTapGesture {
-                calendarViewModel.todaysEvents()
+//                calendar.todaysEvents()
             }
         }
         .background(.black)
