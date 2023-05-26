@@ -16,7 +16,7 @@ struct IntroView: View {
                 .ignoresSafeArea()
             VStack{
                 Text("Olá!!")
-                    .font(.system(size: window!.width / 20, weight: .semibold, design: .rounded))
+                    .font(.system(size: window!.width / 40, weight: .semibold, design: .rounded))
                     .foregroundColor(.black)
                     .multilineTextAlignment(.center)
                 
@@ -33,13 +33,13 @@ struct IntroView: View {
                     .multilineTextAlignment(.center)
                     .frame(width: window!.width / 2, height: window!.height / 4)
                 
-                NavigationLink(destination: AboutView().navigationBarBackButtonHidden(true)) {
-                    
-                    Text("Continuar")
-                        .padding(25)
-                        .background(.white)
-                        .cornerRadius(40)
-                }
+                Text("Continuar")
+                    .font(.system(size: window!.width / 80, weight: .semibold, design: .rounded))
+                    .foregroundColor(.black)
+                    .padding(14)
+                    .background(.white)
+                    .cornerRadius(20)
+                    .frame(width: window!.width / 3, height: window!.height / 6)
                 
             }
         }
