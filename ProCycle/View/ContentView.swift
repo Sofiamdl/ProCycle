@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var calendar = CalendarViewModel()
+
     var body: some View {
         VStack {
             Slider()
         }
+        .environmentObject(calendar)
         .padding()
     }
 }
