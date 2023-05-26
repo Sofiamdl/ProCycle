@@ -11,6 +11,7 @@
 		BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04782A1E8C9700065302 /* DateTracking.swift */; };
 		BCAC047B2A1FEDC900065302 /* CircleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC047A2A1FEDC900065302 /* CircleText.swift */; };
 		BCAC047F2A212C4500065302 /* ProgressViewCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */; };
+		BCAC04852A21323A00065302 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04842A21323A00065302 /* User.swift */; };
 		BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E952A1E83D60098BC6E /* ProCycleApp.swift */; };
 		BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E972A1E83D60098BC6E /* ContentView.swift */; };
 		BF977E9A2A1E83D70098BC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF977E992A1E83D70098BC6E /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		BCAC04782A1E8C9700065302 /* DateTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTracking.swift; sourceTree = "<group>"; };
 		BCAC047A2A1FEDC900065302 /* CircleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleText.swift; sourceTree = "<group>"; };
 		BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewCircleViewModel.swift; sourceTree = "<group>"; };
+		BCAC04842A21323A00065302 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF977E922A1E83D60098BC6E /* ProCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF977E952A1E83D60098BC6E /* ProCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCycleApp.swift; sourceTree = "<group>"; };
 		BF977E972A1E83D60098BC6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,12 +46,36 @@
 		BCAC04802A212C7F00065302 /* CircleProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				BCAC04782A1E8C9700065302 /* DateTracking.swift */,
-				BCAC047A2A1FEDC900065302 /* CircleText.swift */,
 				BCAC04762A1E869D00065302 /* ProgressViewCircle.swift */,
-				BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */,
+				BCAC047A2A1FEDC900065302 /* CircleText.swift */,
+				BCAC04782A1E8C9700065302 /* DateTracking.swift */,
 			);
 			path = CircleProgressView;
+			sourceTree = "<group>";
+		};
+		BCAC04812A21306C00065302 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF977E972A1E83D60098BC6E /* ContentView.swift */,
+				BCAC04802A212C7F00065302 /* CircleProgressView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCAC04822A21308000065302 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BCAC04832A21309000065302 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC04842A21323A00065302 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BF977E892A1E83D60098BC6E = {
@@ -71,12 +97,13 @@
 		BF977E942A1E83D60098BC6E /* ProCycle */ = {
 			isa = PBXGroup;
 			children = (
+				BCAC04832A21309000065302 /* Model */,
+				BCAC04822A21308000065302 /* ViewModel */,
+				BCAC04812A21306C00065302 /* View */,
 				BF977E952A1E83D60098BC6E /* ProCycleApp.swift */,
-				BF977E972A1E83D60098BC6E /* ContentView.swift */,
 				BF977E992A1E83D70098BC6E /* Assets.xcassets */,
 				BF977E9E2A1E83D70098BC6E /* ProCycle.entitlements */,
 				BF977E9B2A1E83D70098BC6E /* Preview Content */,
-				BCAC04802A212C7F00065302 /* CircleProgressView */,
 			);
 			path = ProCycle;
 			sourceTree = "<group>";
@@ -165,6 +192,7 @@
 				BCAC04772A1E869D00065302 /* ProgressViewCircle.swift in Sources */,
 				BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */,
 				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
+				BCAC04852A21323A00065302 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
