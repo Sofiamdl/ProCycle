@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var circleFrame: CGFloat = 450
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        HStack {
+            VStack {
+                
+                CircularProgressView(circleFrame: $circleFrame)
+                
+            }
+            VStack {
+                Text("Fase folicular")
+                    .font(.title)
+            }
+
         }
         .padding()
+        
     }
 }
 
