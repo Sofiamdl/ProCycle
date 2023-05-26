@@ -9,14 +9,49 @@ import EventKit
 import SwiftUI
 
 class CalendarViewModel: ObservableObject {
-    
     var eventStore = EKEventStore()
+    @Published var days: [SliderCellModel] = []
     @Published var events: [EKEvent] = []
     @Published var calendar: EKCalendar?
     
     init() {
         requestAccessToCalendar()
         self.calendar = addCalendar()
+        loadEventsOfCalendar()
+    }
+    
+    func loadEventsOfCalendar() {
+        let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
+        
+        var events = getEventsByDate(firstDate: monthsBefore, finalDate: Date())
+
+        for i in stride(from: -100, to: 0, by: 1) {
+            let modifiedDate = Calendar.current.date(byAdding: .day, value: i, to: Date())!
+            days.append(SliderCellModel(phase: .none, day: modifiedDate))
+        }
+        
+        for i in stride(from: 0, to: 100, by: 1) {
+            let modifiedDate = Calendar.current.date(byAdding: .day, value: i, to: Date())!
+            days.append(SliderCellModel(phase: .none, day: modifiedDate))
+        }
+    }
+    
+    func adjustWroteEvents(events: [EKEvent]) {
+        let eventsAux = {}
+        for event in events {
+            // let numberOfDays = Calendar.numberOfDaysBetween()
+            // for x in numberofdays
+            //    add to x start date
+        }
+    }
+    
+    func compareEventName(event: EKEvent) -> CyclePhase {
+        switch event.title {
+        case "Menstruação":
+            return .menstruation
+        default:
+            return .none
+        }
     }
     
     func requestAccessToCalendar() {
@@ -56,7 +91,7 @@ class CalendarViewModel: ObservableObject {
     }
     
     func calculateFutureEvents(menstruationDate: Date) {
-        let monthsBefore = Date(timeIntervalSinceNow: 100*24*3600)
+        let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
         let events = getEventsByDate(firstDate: monthsBefore, finalDate: menstruationDate)
         
         return
