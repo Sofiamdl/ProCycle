@@ -31,7 +31,7 @@ struct SliderCell: View {
                 } else {
                     day.phase = .menstruation
                 }
-                calendar.adjustCalendar(menstruationDate: day.day)
+                calendar.adjustEventsInCalendarBy(menstruationDate: day.day)
                 
             }
             Text(viewModel.getDate(date: day.day))

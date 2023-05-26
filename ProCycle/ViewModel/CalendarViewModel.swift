@@ -55,17 +55,35 @@ class CalendarViewModel: ObservableObject {
         return calendar
     }
     
-    func adjustCalendar(menstruationDate: Date) {
+    func calculateFutureEvents(menstruationDate: Date) {
+        let monthsBefore = Date(timeIntervalSinceNow: 100*24*3600)
+        let events = getEventsByDate(firstDate: monthsBefore, finalDate: menstruationDate)
+        
+        return
+    }
+    
+    func adjustEventsInCalendarBy(menstruationDate: Date) {
+        removeElementsInCalendarBy(menstruationDate: menstruationDate)
+    }
+    
+    func removeElementsInCalendarBy(menstruationDate: Date) {
+        let monthsAfter = Date(timeIntervalSinceNow: 100*24*3600)
+        events = getEventsByDate(firstDate: menstruationDate, finalDate: monthsAfter)
+        for event in events {
+            removeEvent(eventId: event.calendarItemIdentifier)
+        }
+    }
+    
+    func getEventsByDate(firstDate: Date, finalDate: Date) -> [EKEvent] {
         if let calendar = self.calendar {
             let monthsAfter = Date(timeIntervalSinceNow: 100*24*3600)
             
-            let predicate =  eventStore.predicateForEvents(withStart: menstruationDate, end: monthsAfter, calendars: [calendar])
+            let predicate =  eventStore.predicateForEvents(withStart: firstDate, end: finalDate, calendars: [calendar])
             let events = eventStore.events(matching: predicate)
             
-            for event in events {
-                removeEvent(eventId: event.calendarItemIdentifier)
-            }
+            return events
         }
+        return []
     }
     
     func removeEvent(eventId: String) {
@@ -76,23 +94,6 @@ class CalendarViewModel: ObservableObject {
                 print("failed to save event with error : \(error)")
             }
             print("removed Event")
-        }
-    }
-    
-    func todaysEvents() {
-        DispatchQueue.main.async {
-            let newEvent = EKEvent(eventStore: self.eventStore)
-            newEvent.title = "PFV só testando ele dnv"
-            newEvent.startDate = Date()
-            newEvent.endDate = Date()
-            newEvent.calendar = self.calendar
-            
-            do {
-                try self.eventStore.save(newEvent, span: .thisEvent)
-            } catch let error as NSError {
-                print("failed to save event with error : \(error)")
-            }
-            
         }
     }
 }
