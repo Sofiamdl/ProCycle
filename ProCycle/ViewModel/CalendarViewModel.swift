@@ -16,7 +16,7 @@ class CalendarViewModel: ObservableObject {
     
     init() {
         requestAccessToCalendar()
-        self.calendar = addCalendar()
+        self.calendar = getCalendar()
         loadEventsOfCalendar()
     }
     
@@ -24,10 +24,18 @@ class CalendarViewModel: ObservableObject {
         let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
         
         var events = getEventsByDate(firstDate: monthsBefore, finalDate: Date())
-
+        let dicEvents = adjustWroteEvents(events: events)
+        
         for i in stride(from: -100, to: 0, by: 1) {
             let modifiedDate = Calendar.current.date(byAdding: .day, value: i, to: Date())!
-            days.append(SliderCellModel(phase: .none, day: modifiedDate))
+            if dicEvents[modifiedDate] != nil {
+                if dicEvents[modifiedDate]?.title == "Mentruada" {
+                    days.append(SliderCellModel(phase: .menstruation, day: modifiedDate))
+                }else {
+                    days.append(SliderCellModel(phase: .none, day: modifiedDate))
+                }
+            }
+            
         }
         
         for i in stride(from: 0, to: 100, by: 1) {
@@ -36,13 +44,21 @@ class CalendarViewModel: ObservableObject {
         }
     }
     
-    func adjustWroteEvents(events: [EKEvent]) {
-        let eventsAux = {}
+    func adjustWroteEvents(events: [EKEvent]) -> [Date: EKEvent] {
+        var eventsAux = [Date: EKEvent]()
         for event in events {
-            // let numberOfDays = Calendar.numberOfDaysBetween()
-            // for x in numberofdays
-            //    add to x start date
+            let eventDays = daysBetween(start: event.startDate, end: event.endDate)
+            for day in 0...eventDays {
+                let modifiedDate = Calendar.current.date(byAdding: .day, value: day, to: event.startDate)!
+                eventsAux[modifiedDate] = event
+            }
         }
+        return eventsAux
+        
+    }
+    
+    func daysBetween(start: Date, end: Date) -> Int {
+        return Calendar.current.dateComponents([.day], from: start, to: end).day!
     }
     
     func compareEventName(event: EKEvent) -> CyclePhase {
@@ -67,7 +83,7 @@ class CalendarViewModel: ObservableObject {
         return `default` ?? iCloud ?? local
     }
     
-    func addCalendar() -> EKCalendar {
+    func getCalendar() -> EKCalendar {
         let calendars = eventStore.calendars(for: .event)
         let cicleCalendar = calendars.filter { calendar in
             return calendar.title == "Cicle"
@@ -93,7 +109,6 @@ class CalendarViewModel: ObservableObject {
     func calculateFutureEvents(menstruationDate: Date) {
         let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
         let events = getEventsByDate(firstDate: monthsBefore, finalDate: menstruationDate)
-        
         return
     }
     
