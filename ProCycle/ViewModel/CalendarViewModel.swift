@@ -56,14 +56,15 @@ class CalendarViewModel: ObservableObject {
         }
     }
 
-    func todaysEvents() {
+    
+    func createEvent(title: String, startDate: Date, endDate: Date) {
         DispatchQueue.main.async {
             let newEvent = EKEvent(eventStore: self.eventStore)
-            newEvent.title = "PFV só testando ele dnv"
-            newEvent.startDate = Date()
-            newEvent.endDate = Date()
+            newEvent.title = "🩸 Menstruação"
+            newEvent.startDate = startDate
+            newEvent.endDate = endDate
             newEvent.calendar = self.calendar
-            
+            newEvent.isAllDay = true
             do {
                 try self.eventStore.save(newEvent, span: .thisEvent)
               } catch let error as NSError {
