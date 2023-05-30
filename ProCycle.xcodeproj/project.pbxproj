@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B87F3D12A2679F70000635D /* MonthCycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D02A2679F70000635D /* MonthCycleService.swift */; };
 		BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E952A1E83D60098BC6E /* ProCycleApp.swift */; };
 		BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E972A1E83D60098BC6E /* ContentView.swift */; };
 		BF977E9A2A1E83D70098BC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF977E992A1E83D70098BC6E /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B87F3D02A2679F70000635D /* MonthCycleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCycleService.swift; sourceTree = "<group>"; };
 		BF977E922A1E83D60098BC6E /* ProCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF977E952A1E83D60098BC6E /* ProCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCycleApp.swift; sourceTree = "<group>"; };
 		BF977E972A1E83D60098BC6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				BF977EBE2A2151B60098BC6E /* CalendarService.swift */,
 				BF977EC02A2151BE0098BC6E /* EventService.swift */,
+				5B87F3D02A2679F70000635D /* MonthCycleService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */,
 				BF977EB12A1EA8880098BC6E /* SliderCellViewModel.swift in Sources */,
 				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
+				5B87F3D12A2679F70000635D /* MonthCycleService.swift in Sources */,
 				BF977EBF2A2151B60098BC6E /* CalendarService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,9 +26,10 @@ struct ContentView: View {
                     .padding()
             }
             Button("criar evento", action: {
-                startDate -= Double(daysAfterMenstruation)!*24*3600
-                endDate = startDate + Double(averageDuration)!*24*3600
-                calendar.createEvent(title: "", startDate: startDate, endDate:endDate)
+//                startDate -= Double(daysAfterMenstruation)!*24*3600
+//                endDate = startDate + Double(averageDuration)!*24*3600
+//                calendar.createEvent(title: "", startDate: startDate, endDate:endDate)
+                calendar.firstLoadElementsToCalendar(daysBefore: Int(daysAfterMenstruation)!, averageMenstruationDuration: Int(averageDuration)!, averageCycleDuration: Int(averageCycle)!)
             })
         }
         .environmentObject(calendar)

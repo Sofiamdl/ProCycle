@@ -14,7 +14,7 @@ class CalendarViewModel: ObservableObject {
     @Published var events: [EKEvent] = []
     private var calendar: CalendarService
     private var eventService: EventService
-
+    
     init() {
         /// colocar isso em uma tela inicial
         eventStore.requestAccess(to: .event) { success, error in
@@ -31,7 +31,7 @@ class CalendarViewModel: ObservableObject {
         
         let events = eventService.getEventsByDate(firstDate: monthsBefore, finalDate: Date(), calendar: calendar.calendar)
         let dicEvents = makeDictionaryOfEvents(events: events)
-
+        
         for i in stride(from: -100, to: 0, by: 1) {
             let modifiedDate = Calendar.current.date(byAdding: .day, value: i, to: Date())!
             if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)] != nil {
@@ -69,6 +69,11 @@ class CalendarViewModel: ObservableObject {
         return Calendar.current.dateComponents([.day], from: start, to: end).day!
     }
     
+    func firstLoadElementsToCalendar(daysBefore: Int, averageMenstruationDuration: Int, averageCycleDuration: Int) {
+        let firstDayMenstruation = Calendar.current.date(byAdding: .day, value: -daysBefore, to: Date())!
+        addCyclePhasesToCalendar(calendar: calendar.calendar, firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration)
+    }
+    
     func calculateFutureEvents(menstruationDate: Date) {
         let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
         let events = eventService.getEventsByDate(firstDate: monthsBefore, finalDate: menstruationDate, calendar: calendar.calendar)
@@ -78,9 +83,21 @@ class CalendarViewModel: ObservableObject {
     func adjustEventsInCalendarBy(menstruationDate: Date) {
         eventService.removeElementsInCalendarBy(menstruationDate: menstruationDate, calendar: calendar.calendar!)
     }
-
+    
     func createEvent(title: String, startDate: Date, endDate: Date) {
         eventService.createEvent(title: title, startDate: startDate, endDate: endDate, calendar: calendar.calendar!)
+    }
+    
+    func addCyclePhasesToCalendar(calendar: EKCalendar?, firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int) {
+        let monthCycleService = MonthCycleService(eventStore: eventStore,
+                                                  firstDayMenstruation: firstDayMenstruation,
+                                                  averageMenstruationDuration: averageMenstruationDuration,
+                                                  averageCycleDuration: averageCycleDuration)
+        let phases = monthCycleService.getPhases()
+        for (title, startDate, endDate) in phases {
+            createEvent(title: title, startDate: startDate, endDate: endDate)
+        }
+        
     }
     
     

@@ -50,7 +50,7 @@ struct EventService{
     func createEvent(title: String, startDate: Date, endDate: Date, calendar: EKCalendar) {
         DispatchQueue.main.async {
             let newEvent = EKEvent(eventStore: self.eventStore)
-            newEvent.title = "🩸 Menstruação"
+            newEvent.title = title
             newEvent.startDate = startDate
             newEvent.endDate = endDate
             newEvent.calendar = calendar
