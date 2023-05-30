@@ -9,68 +9,79 @@ import EventKit
 import SwiftUI
 
 class CalendarViewModel: ObservableObject {
-
     var eventStore = EKEventStore()
+    @Published var days: [SliderCellModel] = []
     @Published var events: [EKEvent] = []
-    @Published var calendar: EKCalendar?
+    private var calendar: CalendarService
+    private var eventService: EventService
 
     init() {
-        requestAccessToCalendar()
-        self.calendar = addCalendar()
-    }
-
-    func requestAccessToCalendar() {
+        /// colocar isso em uma tela inicial
         eventStore.requestAccess(to: .event) { success, error in
             print(success)
         }
+        ///
+        self.calendar = CalendarService(eventStore: eventStore)
+        self.eventService = EventService(eventStore: eventStore)
+        loadEventsOfCalendar()
     }
+    
+    func loadEventsOfCalendar() {
+        let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
+        
+        let events = eventService.getEventsByDate(firstDate: monthsBefore, finalDate: Date(), calendar: calendar.calendar)
+        let dicEvents = makeDictionaryOfEvents(events: events)
 
-    func bestPossibleEKSource() -> EKSource? {
-        let `default` = eventStore.defaultCalendarForNewEvents?.source
-        let iCloud = eventStore.sources.first(where: { $0.title == "iCloud" }) // this is fragile, user can rename the source
-        let local = eventStore.sources.first(where: { $0.sourceType == .local })
-        return `default` ?? iCloud ?? local
-    }
-
-    func addCalendar() -> EKCalendar {
-        let calendar = EKCalendar(for: .event, eventStore: self.eventStore)
-            calendar.title = "Cicle"
-        guard let source = self.bestPossibleEKSource() else {
-               return EKCalendar()
-           }
-           calendar.source = source
-        try! self.eventStore.saveCalendar(calendar, commit: true)
-        return calendar
-    }
-
-    func adjustCalendar(menstruationDate: Date) {
-        if let calendar = self.calendar {
-            let monthsAfter = Date(timeIntervalSinceNow: 100*24*3600)
+        for i in stride(from: -100, to: 0, by: 1) {
+            let modifiedDate = Calendar.current.date(byAdding: .day, value: i, to: Date())!
+            if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)] != nil {
+                if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)]?.title == "🩸 Menstruação" {
+                    days.append(SliderCellModel(phase: .menstruation, day: modifiedDate))
+                }
+            }
+            else {
+                days.append(SliderCellModel(phase: .none, day: modifiedDate))
+            }
             
-            let predicate =  eventStore.predicateForEvents(withStart: menstruationDate, end: monthsAfter, calendars: [calendar])
-            let events = eventStore.events(matching: predicate)
-            
-            for event in events {
-                print(event)
+        }
+        
+        for i in stride(from: 0, to: 100, by: 1) {
+            let modifiedDate = Calendar.current.date(byAdding: .day, value: i, to: Date())!
+            days.append(SliderCellModel(phase: .none, day: modifiedDate))
+        }
+    }
+    
+    func makeDictionaryOfEvents(events: [EKEvent]) -> [String: EKEvent] {
+        var eventsAux = [String: EKEvent]()
+        for event in events {
+            let eventDays = daysBetween(start: event.startDate, end: event.endDate)
+            for day in 0...eventDays {
+                let modifiedDate = Calendar.current.date(byAdding: .day, value: day, to: event.startDate)!
+                
+                eventsAux[modifiedDate.formatted(date: .complete, time: .omitted)] = event
             }
         }
+        return eventsAux
+        
+    }
+    
+    func daysBetween(start: Date, end: Date) -> Int {
+        return Calendar.current.dateComponents([.day], from: start, to: end).day!
+    }
+    
+    func calculateFutureEvents(menstruationDate: Date) {
+        let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
+        let events = eventService.getEventsByDate(firstDate: monthsBefore, finalDate: menstruationDate, calendar: calendar.calendar)
+        return
+    }
+    
+    func adjustEventsInCalendarBy(menstruationDate: Date) {
+        eventService.removeElementsInCalendarBy(menstruationDate: menstruationDate, calendar: calendar.calendar!)
     }
 
-    
     func createEvent(title: String, startDate: Date, endDate: Date) {
-        DispatchQueue.main.async {
-            let newEvent = EKEvent(eventStore: self.eventStore)
-            newEvent.title = "🩸 Menstruação"
-            newEvent.startDate = startDate
-            newEvent.endDate = endDate
-            newEvent.calendar = self.calendar
-            newEvent.isAllDay = true
-            do {
-                try self.eventStore.save(newEvent, span: .thisEvent)
-              } catch let error as NSError {
-                  print("failed to save event with error : \(error)")
-              }
-            
-        }
+        eventService.createEvent(title: title, startDate: startDate, endDate: endDate, calendar: calendar.calendar!)
     }
+    
+    
 }
