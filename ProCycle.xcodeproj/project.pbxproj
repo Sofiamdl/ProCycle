@@ -14,11 +14,10 @@
 		BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EA52A1E86B00098BC6E /* Slider.swift */; };
 		BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EA82A1E877A0098BC6E /* SliderCell.swift */; };
 		BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */; };
-		BF977EAF2A1E94EC0098BC6E /* SliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EAE2A1E94EC0098BC6E /* SliderViewModel.swift */; };
 		BF977EB12A1EA8880098BC6E /* SliderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB02A1EA8880098BC6E /* SliderCellViewModel.swift */; };
 		BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */; };
-		BF977EBF2A2151B60098BC6E /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EBE2A2151B60098BC6E /* Calendar.swift */; };
-		BF977EC12A2151BE0098BC6E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EC02A2151BE0098BC6E /* Event.swift */; };
+		BF977EBF2A2151B60098BC6E /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EBE2A2151B60098BC6E /* CalendarService.swift */; };
+		BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EC02A2151BE0098BC6E /* EventService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +30,10 @@
 		BF977EA52A1E86B00098BC6E /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Slider.swift; path = ProCycle/Components/Slider.swift; sourceTree = SOURCE_ROOT; };
 		BF977EA82A1E877A0098BC6E /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCellModel.swift; sourceTree = "<group>"; };
-		BF977EAE2A1E94EC0098BC6E /* SliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewModel.swift; sourceTree = "<group>"; };
 		BF977EB02A1EA8880098BC6E /* SliderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCellViewModel.swift; sourceTree = "<group>"; };
 		BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
-		BF977EBE2A2151B60098BC6E /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
-		BF977EC02A2151BE0098BC6E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		BF977EBE2A2151B60098BC6E /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
+		BF977EC02A2151BE0098BC6E /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 		BF977EB72A2131120098BC6E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BF977EAE2A1E94EC0098BC6E /* SliderViewModel.swift */,
 				BF977EB02A1EA8880098BC6E /* SliderCellViewModel.swift */,
 				BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */,
 			);
@@ -127,8 +124,8 @@
 		BF977EBD2A2151A90098BC6E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				BF977EBE2A2151B60098BC6E /* Calendar.swift */,
-				BF977EC02A2151BE0098BC6E /* Event.swift */,
+				BF977EBE2A2151B60098BC6E /* CalendarService.swift */,
+				BF977EC02A2151BE0098BC6E /* EventService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -204,15 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */,
-				BF977EC12A2151BE0098BC6E /* Event.swift in Sources */,
+				BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */,
 				BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */,
 				BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */,
 				BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */,
 				BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */,
 				BF977EB12A1EA8880098BC6E /* SliderCellViewModel.swift in Sources */,
-				BF977EAF2A1E94EC0098BC6E /* SliderViewModel.swift in Sources */,
 				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
-				BF977EBF2A2151B60098BC6E /* Calendar.swift in Sources */,
+				BF977EBF2A2151B60098BC6E /* CalendarService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
