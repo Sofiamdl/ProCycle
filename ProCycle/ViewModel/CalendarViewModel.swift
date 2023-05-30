@@ -35,7 +35,7 @@ class CalendarViewModel: ObservableObject {
         for i in stride(from: -100, to: 0, by: 1) {
             let modifiedDate = Calendar.current.date(byAdding: .day, value: i, to: Date())!
             if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)] != nil {
-                if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)]?.title == "Mentruada" {
+                if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)]?.title == "🩸 Menstruação" {
                     days.append(SliderCellModel(phase: .menstruation, day: modifiedDate))
                 }
             }
@@ -79,4 +79,9 @@ class CalendarViewModel: ObservableObject {
         eventService.removeElementsInCalendarBy(menstruationDate: menstruationDate, calendar: calendar.calendar!)
     }
 
+    func createEvent(title: String, startDate: Date, endDate: Date) {
+        eventService.createEvent(title: title, startDate: startDate, endDate: endDate, calendar: calendar.calendar!)
+    }
+    
+    
 }

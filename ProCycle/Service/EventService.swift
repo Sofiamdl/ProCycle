@@ -46,4 +46,21 @@ struct EventService{
             removeEvent(eventId: event.calendarItemIdentifier)
         }
     }
+    
+    func createEvent(title: String, startDate: Date, endDate: Date, calendar: EKCalendar) {
+        DispatchQueue.main.async {
+            let newEvent = EKEvent(eventStore: self.eventStore)
+            newEvent.title = "🩸 Menstruação"
+            newEvent.startDate = startDate
+            newEvent.endDate = endDate
+            newEvent.calendar = calendar
+            newEvent.isAllDay = true
+            do {
+                try self.eventStore.save(newEvent, span: .thisEvent)
+              } catch let error as NSError {
+                  print("failed to save event with error : \(error)")
+              }
+            
+        }
+    }
 }
