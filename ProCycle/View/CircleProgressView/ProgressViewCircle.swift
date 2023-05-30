@@ -22,13 +22,28 @@ struct CircularProgressView: View {
         
         ZStack {
             Circle()
-                .trim(from: 0.0, to: 0.93)
+                .trim(from: 0.0, to: 0.90)
                 .stroke(
-                    AngularGradient(
-                        gradient: Gradient(
-                            colors: [.blue, .green, .blue]),
-                        center: .center
-                    ),
+                    Color.indigo,
+                    style: StrokeStyle(lineWidth: circleFrame/10,
+                                       lineCap: .round,
+                                       lineJoin: .round))
+                .rotationEffect((Angle(degrees: 270)))
+
+            Circle()
+                .trim(from: 0.0, to: 0.20)
+                .stroke(
+                    Color.pink,
+                    style: StrokeStyle(lineWidth: circleFrame/10,
+                                       lineCap: .round,
+                                       lineJoin: .round))
+                
+
+                .rotationEffect((Angle(degrees: 270)))
+            Circle()
+                .trim(from: 0.50, to: 0.70)
+                .stroke(
+                    Color.blue,
                     style: StrokeStyle(lineWidth: circleFrame/10,
                                        lineCap: .round,
                                        lineJoin: .round))
@@ -56,7 +71,7 @@ struct CircularProgressView: View {
                         
                         Circle()
                             .frame(width: circleFrame/5.5)
-                            .foregroundColor(Color.red)
+                            .foregroundColor(Color.white)
                             .offset(x: 0, y: -(circleFrame/2))
                             .rotationEffect(.degrees(viewModel.accumulatedDegrees))
                         

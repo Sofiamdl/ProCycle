@@ -13,5 +13,5 @@ struct User {
     let periodDuration: Int
     let folicularDuration: Int
     let fertileDuration: Int
-    let luthealDuration: Int 
+    let luthealDuration: Int
 }

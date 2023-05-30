@@ -9,11 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     @State var circleFrame: CGFloat = 450
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var cycles: FetchedResults<CycleInfos>
+    
     var body: some View {
         HStack {
             VStack {
                 
                 CircularProgressView(circleFrame: $circleFrame)
+                Button("ADD"){
+                    let cycleInfo = CycleInfos(context: moc)
+                    cycleInfo.phaseDescription = "a"
+                    cycleInfo.phaseExpandedDescription = "ab"
+                    cycleInfo.phaseName = "c"
+                    try? moc.save()
+
+                    
+                }
                 
             }
             VStack {

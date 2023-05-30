@@ -12,6 +12,8 @@
 		BCAC047B2A1FEDC900065302 /* CircleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC047A2A1FEDC900065302 /* CircleText.swift */; };
 		BCAC047F2A212C4500065302 /* ProgressViewCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */; };
 		BCAC04852A21323A00065302 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04842A21323A00065302 /* User.swift */; };
+		BCAC04872A21408100065302 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04862A21408100065302 /* DataController.swift */; };
+		BCAC048A2A2140C300065302 /* CycleInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */; };
 		BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E952A1E83D60098BC6E /* ProCycleApp.swift */; };
 		BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E972A1E83D60098BC6E /* ContentView.swift */; };
 		BF977E9A2A1E83D70098BC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF977E992A1E83D70098BC6E /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		BCAC047A2A1FEDC900065302 /* CircleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleText.swift; sourceTree = "<group>"; };
 		BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewCircleViewModel.swift; sourceTree = "<group>"; };
 		BCAC04842A21323A00065302 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BCAC04862A21408100065302 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		BCAC04892A2140C300065302 /* CycleInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CycleInfo.xcdatamodel; sourceTree = "<group>"; };
 		BF977E922A1E83D60098BC6E /* ProCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF977E952A1E83D60098BC6E /* ProCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCycleApp.swift; sourceTree = "<group>"; };
 		BF977E972A1E83D60098BC6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				BF977E972A1E83D60098BC6E /* ContentView.swift */,
+				BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */,
 				BCAC04802A212C7F00065302 /* CircleProgressView */,
 			);
 			path = View;
@@ -104,6 +109,7 @@
 				BF977E992A1E83D70098BC6E /* Assets.xcassets */,
 				BF977E9E2A1E83D70098BC6E /* ProCycle.entitlements */,
 				BF977E9B2A1E83D70098BC6E /* Preview Content */,
+				BCAC04862A21408100065302 /* DataController.swift */,
 			);
 			path = ProCycle;
 			sourceTree = "<group>";
@@ -191,7 +197,9 @@
 				BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */,
 				BCAC04772A1E869D00065302 /* ProgressViewCircle.swift in Sources */,
 				BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */,
+				BCAC04872A21408100065302 /* DataController.swift in Sources */,
 				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
+				BCAC048A2A2140C300065302 /* CycleInfo.xcdatamodeld in Sources */,
 				BCAC04852A21323A00065302 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +398,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BCAC04892A2140C300065302 /* CycleInfo.xcdatamodel */,
+			);
+			currentVersion = BCAC04892A2140C300065302 /* CycleInfo.xcdatamodel */;
+			path = CycleInfo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF977E8A2A1E83D60098BC6E /* Project object */;
 }
