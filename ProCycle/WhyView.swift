@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct WhyView: View {
+    
+    @EnvironmentObject private var coordinator: Coordinator
+    
     var window = NSScreen.main?.visibleFrame
     var body: some View {
         ZStack{

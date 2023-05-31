@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct ProCycleApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        WindowGroup{
+           CoordinatorView()
+
         }
     }
 }

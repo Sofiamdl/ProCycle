@@ -7,7 +7,11 @@
 
 import SwiftUI
 
+
 struct IntroView: View {
+    
+    @EnvironmentObject private var coordinator: Coordinator
+    
     //Getting window size
     var window = NSScreen.main?.visibleFrame
     var body: some View {
@@ -15,6 +19,7 @@ struct IntroView: View {
             Color.purple
                 .ignoresSafeArea()
             VStack{
+                Color.blue
                 Text("Olá!!")
                     .font(.system(size: window!.width / 40, weight: .semibold, design: .rounded))
                     .foregroundColor(.black)
@@ -33,13 +38,20 @@ struct IntroView: View {
                     .multilineTextAlignment(.center)
                     .frame(width: window!.width / 2, height: window!.height / 4)
                 
-                Text("Continuar")
-                    .font(.system(size: window!.width / 80, weight: .semibold, design: .rounded))
-                    .foregroundColor(.black)
-                    .padding(14)
-                    .background(.white)
-                    .cornerRadius(20)
-                    .frame(width: window!.width / 3, height: window!.height / 6)
+
+                  Button(action: {
+                      coordinator.push(.about)
+                  }, label: {
+                    Text("Continuar")
+                          .font(.system(size: window!.width / 80, weight: .semibold, design: .rounded))
+                          .foregroundColor(.black)
+                          .padding(14)
+                          .background(.white)
+                          .cornerRadius(20)
+                          .frame(width: window!.width / 3, height: window!.height / 6)
+                  })
+                
+                
                 
             }
         }
