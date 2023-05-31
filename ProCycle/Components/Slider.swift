@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct Slider: View {
-    @StateObject private var viewModel = SliderViewModel()
     @State private var scrollPosition: CGPoint = .zero
-    @StateObject private var calendarViewModel = CalendarViewModel()
+    @EnvironmentObject var calendar: CalendarViewModel
 
     var body: some View {
         ScrollViewReader { value in
             ScrollView (.horizontal, showsIndicators: false) {
                 LazyHStack (spacing: 20) {
-                    ForEach (0 ..< viewModel.days.count, id: \.self) { day in
-                        SliderCell(day: viewModel.days[day])
+                    ForEach (0 ..< calendar.days.count, id: \.self) { day in
+                        SliderCell(day: calendar.days[day])
                     }
                 }
                 .frame(maxWidth:.infinity, maxHeight: 150)
@@ -27,7 +26,7 @@ struct Slider: View {
                 })
                 .onPreferenceChange(ScrollOffsetPreferenceKey.self) { value in
                     self.scrollPosition = value
-                    print(scrollPosition)
+//                    print(scrollPosition)
                 }
             }
             .frame(maxWidth: 300, maxHeight: 150)
@@ -36,7 +35,7 @@ struct Slider: View {
             }
             .coordinateSpace(name: "scroll")
             .onTapGesture {
-                calendarViewModel.todaysEvents()
+//                calendar.todaysEvents()
             }
         }
         .background(.black)

@@ -10,7 +10,8 @@ import SwiftUI
 struct SliderCell: View {
     @State var day: SliderCellModel
     @StateObject private var viewModel = SliderCellViewModel()
-    
+    @EnvironmentObject var calendar: CalendarViewModel
+
     var body: some View {
         VStack {
             Text(viewModel.getDayOfTheWeek(date: day.day))
@@ -24,12 +25,13 @@ struct SliderCell: View {
                     .padding(.top, 6)
             }
             .frame(height: 100)
-            .onTapGesture {
+            .onTapGesture  {
                 if day.phase == .menstruation {
                     day.phase = .none
                 } else {
                     day.phase = .menstruation
                 }
+                calendar.adjustEventsInCalendarBy(menstruationDate: day.day)
                 
             }
             Text(viewModel.getDate(date: day.day))
