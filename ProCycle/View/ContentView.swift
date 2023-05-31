@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var circleFrame: CGFloat = 450
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var cycles: FetchedResults<CycleInfos>
     @ObservedObject var calendar = CalendarViewModel()
     @State var daysAfterMenstruation = "15"
     @State var averageDuration = "5"
@@ -18,6 +21,16 @@ struct ContentView: View {
         VStack {
             Slider()
             VStack {
+                CircularProgressView(circleFrame: $circleFrame)
+                    .onAppear {
+                    let cycleInfo = CycleInfos(context: moc)
+                    cycleInfo.phaseDescription = "a"
+                    cycleInfo.phaseExpandedDescription = "ab"
+                    cycleInfo.phaseName = "c"
+                    try? moc.save()
+
+                    
+                }
                 TextField ("dias que fazem da ultima", text: $daysAfterMenstruation)
                     .padding()
                 TextField ("duração media", text: $averageDuration)

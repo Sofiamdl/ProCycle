@@ -14,6 +14,13 @@
 		3AC1B5FD2A214BE300C7FC97 /* WhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */; };
 		5B87F3D12A2679F70000635D /* MonthCycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D02A2679F70000635D /* MonthCycleService.swift */; };
 		5B87F3D32A27C9CF0000635D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D22A27C9CF0000635D /* ContentView.swift */; };
+		BCAC04772A1E869D00065302 /* ProgressViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04762A1E869D00065302 /* ProgressViewCircle.swift */; };
+		BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04782A1E8C9700065302 /* DateTracking.swift */; };
+		BCAC047B2A1FEDC900065302 /* CircleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC047A2A1FEDC900065302 /* CircleText.swift */; };
+		BCAC047F2A212C4500065302 /* ProgressViewCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */; };
+		BCAC04852A21323A00065302 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04842A21323A00065302 /* User.swift */; };
+		BCAC04872A21408100065302 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04862A21408100065302 /* DataController.swift */; };
+		BCAC048A2A2140C300065302 /* CycleInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */; };
 		BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E952A1E83D60098BC6E /* ProCycleApp.swift */; };
 		BF977E9A2A1E83D70098BC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF977E992A1E83D70098BC6E /* Assets.xcassets */; };
 		BF977E9D2A1E83D70098BC6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF977E9C2A1E83D70098BC6E /* Preview Assets.xcassets */; };
@@ -34,6 +41,13 @@
 		3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyView.swift; sourceTree = "<group>"; };
 		5B87F3D02A2679F70000635D /* MonthCycleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCycleService.swift; sourceTree = "<group>"; };
 		5B87F3D22A27C9CF0000635D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BCAC04762A1E869D00065302 /* ProgressViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewCircle.swift; sourceTree = "<group>"; };
+		BCAC04782A1E8C9700065302 /* DateTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTracking.swift; sourceTree = "<group>"; };
+		BCAC047A2A1FEDC900065302 /* CircleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleText.swift; sourceTree = "<group>"; };
+		BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewCircleViewModel.swift; sourceTree = "<group>"; };
+		BCAC04842A21323A00065302 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BCAC04862A21408100065302 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		BCAC04892A2140C300065302 /* CycleInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CycleInfo.xcdatamodel; sourceTree = "<group>"; };
 		BF977E922A1E83D60098BC6E /* ProCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF977E952A1E83D60098BC6E /* ProCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCycleApp.swift; sourceTree = "<group>"; };
 		BF977E992A1E83D70098BC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +73,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BCAC04802A212C7F00065302 /* CircleProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC04762A1E869D00065302 /* ProgressViewCircle.swift */,
+				BCAC047A2A1FEDC900065302 /* CircleText.swift */,
+				BCAC04782A1E8C9700065302 /* DateTracking.swift */,
+			);
+			path = CircleProgressView;
+			sourceTree = "<group>";
+		};
+		BCAC04812A21306C00065302 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */,
+				BCAC04802A212C7F00065302 /* CircleProgressView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCAC04822A21308000065302 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BCAC04832A21309000065302 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC04842A21323A00065302 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BF977E892A1E83D60098BC6E = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +129,9 @@
 		BF977E942A1E83D60098BC6E /* ProCycle */ = {
 			isa = PBXGroup;
 			children = (
+				BCAC04832A21309000065302 /* Model */,
+				BCAC04822A21308000065302 /* ViewModel */,
+				BCAC04812A21306C00065302 /* View */,
 				BF977EBD2A2151A90098BC6E /* Service */,
 				BF977EB92A2131980098BC6E /* Model */,
 				BF977EA42A1E86A10098BC6E /* Components */,
@@ -92,6 +144,7 @@
 				BF977E992A1E83D70098BC6E /* Assets.xcassets */,
 				BF977E9E2A1E83D70098BC6E /* ProCycle.entitlements */,
 				BF977E9B2A1E83D70098BC6E /* Preview Content */,
+				BCAC04862A21408100065302 /* DataController.swift */,
 			);
 			path = ProCycle;
 			sourceTree = "<group>";
@@ -218,6 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAC047F2A212C4500065302 /* ProgressViewCircleViewModel.swift in Sources */,
+				BCAC047B2A1FEDC900065302 /* CircleText.swift in Sources */,
+				BCAC04772A1E869D00065302 /* ProgressViewCircle.swift in Sources */,
+				BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */,
+				BCAC04872A21408100065302 /* DataController.swift in Sources */,
+				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
+				BCAC048A2A2140C300065302 /* CycleInfo.xcdatamodeld in Sources */,
+				BCAC04852A21323A00065302 /* User.swift in Sources */,
 				BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */,
 				3AC1B5FD2A214BE300C7FC97 /* WhyView.swift in Sources */,
 				BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */,
@@ -373,6 +434,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studies.s.ProCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -403,6 +465,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studies.s.ProCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +497,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BCAC04892A2140C300065302 /* CycleInfo.xcdatamodel */,
+			);
+			currentVersion = BCAC04892A2140C300065302 /* CycleInfo.xcdatamodel */;
+			path = CycleInfo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF977E8A2A1E83D60098BC6E /* Project object */;
 }
