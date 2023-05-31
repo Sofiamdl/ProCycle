@@ -29,11 +29,12 @@ struct CalendarService{
         let cicleCalendar = calendars.filter { calendar in
             return calendar.title == "Cicle"
         }
+        
         if cicleCalendar.count != 0 {
             return cicleCalendar[0]
-        } else {
-            return newCalendar()
         }
+        
+        return newCalendar()
     }
     
     func newCalendar() -> EKCalendar {
