@@ -17,7 +17,7 @@ struct ContentView: View {
             VStack {
                 
                 CircularProgressView(circleFrame: $circleFrame)
-                Button("ADD"){
+                    .onAppear {
                     let cycleInfo = CycleInfos(context: moc)
                     cycleInfo.phaseDescription = "a"
                     cycleInfo.phaseExpandedDescription = "ab"
@@ -28,10 +28,7 @@ struct ContentView: View {
                 }
                 
             }
-            VStack {
-                Text("Fase folicular")
-                    .font(.title)
-            }
+            
 
         }
         .padding()

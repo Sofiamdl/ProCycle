@@ -54,21 +54,32 @@ struct CircularProgressView: View {
                     ZStack {
                         Circle()
                             .frame(width: circleFrame/1.5)
-                        Text(viewModel.getDate())
-                            .foregroundColor(Color.red)
-                            .font(.title2)
-                        CircleText(radius: circleFrame/2, text: "Período menstrual")
-                            .rotationEffect((Angle(degrees: 30)))
-                            .offset(x: (circleFrame/10)/8, y: -(circleFrame/10)/4)
+//                        Text(viewModel.getDate())
+//                            .foregroundColor(Color.indigo)
+//                            .font(.title2)
+                        VStack {
                         
-                        CircleText(radius: circleFrame/2, text: "Período fértil")
-                            .rotationEffect((Angle(degrees: 180)))
-                            .offset(x: -(circleFrame/10)/8, y: (circleFrame/10)/4)
-                        
-                        CircleText(radius: circleFrame/2, text: "Fase lútea")
-                            .rotationEffect((Angle(degrees: 300)))
-                            .offset(x: -(circleFrame/10)/8, y: -(circleFrame/10)/4)
-                        
+                            
+                        Text("DIA")
+                            .foregroundColor(Color.indigo)
+                            .font(.title3)
+                        //add o dia do ciclo aqui!!!!!!
+                        Text("02")
+                            .foregroundColor(Color.indigo)
+                            .font(.largeTitle)
+                        }
+//                        CircleText(radius: circleFrame/2, text: "Período menstrual")
+//                            .rotationEffect((Angle(degrees: 30)))
+//                            .offset(x: (circleFrame/10)/8, y: -(circleFrame/10)/4)
+//
+//                        CircleText(radius: circleFrame/2, text: "Período fértil")
+//                            .rotationEffect((Angle(degrees: 180)))
+//                            .offset(x: -(circleFrame/10)/8, y: (circleFrame/10)/4)
+//
+//                        CircleText(radius: circleFrame/2, text: "Fase lútea")
+//                            .rotationEffect((Angle(degrees: 300)))
+//                            .offset(x: -(circleFrame/10)/8, y: -(circleFrame/10)/4)
+//
                         Circle()
                             .frame(width: circleFrame/5.5)
                             .foregroundColor(Color.white)
