@@ -11,7 +11,7 @@ import SwiftUI
 struct ProCycleApp: App {
     var body: some Scene {
         WindowGroup{
-           CoordinatorView()
+            ContentView()
 
         }
     }
