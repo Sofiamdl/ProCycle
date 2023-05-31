@@ -89,7 +89,7 @@ class CalendarViewModel: ObservableObject {
     }
     
     func addCyclePhasesToCalendar(calendar: EKCalendar?, firstDayMenstruation: Date, averageMenstruationDuration: Int, averageCycleDuration: Int) {
-        let monthCycleService = MonthCycleService(eventStore: eventStore,
+        var monthCycleService = MonthCycleService(eventStore: eventStore,
                                                   firstDayMenstruation: firstDayMenstruation,
                                                   averageMenstruationDuration: averageMenstruationDuration,
                                                   averageCycleDuration: averageCycleDuration)
