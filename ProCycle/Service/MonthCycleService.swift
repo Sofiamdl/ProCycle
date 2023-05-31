@@ -26,7 +26,7 @@ struct MonthCycleService {
     
     mutating func getPhases() -> [(String, Date, Date)]{
         var auxArray: [(String, Date, Date)] = []
-        for _ in 1...200 {
+        for _ in 1...12 {
             auxArray.append(contentsOf: [calculateMenstruationDate(),calculateFolicularDate(), calculateFertileDate(), calculateLutealDate(), calculatePMSDate()])
             monthsFromMenstruation += 1
         }

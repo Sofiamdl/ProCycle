@@ -12,6 +12,8 @@ class CalendarViewModel: ObservableObject {
     var eventStore = EKEventStore()
     @Published var days: [SliderCellModel] = []
     @Published var events: [EKEvent] = []
+    @Published var showingAlert = false
+
     private var calendar: CalendarService
     private var eventService: EventService
     
@@ -37,6 +39,11 @@ class CalendarViewModel: ObservableObject {
             if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)] != nil {
                 if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)]?.title == "🩸 Menstruação" {
                     days.append(SliderCellModel(phase: .menstruation, day: modifiedDate))
+                } else if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)]?.title == "Menstruação Prevista" {
+                    days.append(SliderCellModel(phase: .expectedMenstruation, day: modifiedDate))
+                }
+                else {
+                    days.append(SliderCellModel(phase: .none, day: modifiedDate))
                 }
             }
             else {
@@ -74,14 +81,9 @@ class CalendarViewModel: ObservableObject {
         addCyclePhasesToCalendar(calendar: calendar.calendar, firstDayMenstruation: firstDayMenstruation, averageMenstruationDuration: averageMenstruationDuration, averageCycleDuration: averageCycleDuration)
     }
     
-    func calculateFutureEvents(menstruationDate: Date) {
-        let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
-        let events = eventService.getEventsByDate(firstDate: monthsBefore, finalDate: menstruationDate, calendar: calendar.calendar)
-        return
-    }
-    
     func adjustEventsInCalendarBy(menstruationDate: Date) {
         eventService.removeElementsInCalendarBy(menstruationDate: menstruationDate, calendar: calendar.calendar!)
+        
     }
     
     func createEvent(title: String, startDate: Date, endDate: Date) {

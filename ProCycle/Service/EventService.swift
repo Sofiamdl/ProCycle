@@ -63,4 +63,10 @@ struct EventService{
             
         }
     }
+    
+    func calculateFutureEvents(menstruationDate: Date, calendar: EKCalendar) {
+        let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
+        let events = getEventsByDate(firstDate: monthsBefore, finalDate: menstruationDate, calendar: calendar)
+        return
+    }
 }
