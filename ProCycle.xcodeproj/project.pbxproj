@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A42806F2A21352C00CFA769 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42806E2A21352C00CFA769 /* IntroView.swift */; };
+		3A576CDA2A279C50002C37E9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A576CD92A279C50002C37E9 /* Coordinator.swift */; };
+		3A576CDC2A279F32002C37E9 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A576CDB2A279F32002C37E9 /* CoordinatorView.swift */; };
+		3AC1B5FB2A2143D900C7FC97 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1B5FA2A2143D900C7FC97 /* AboutView.swift */; };
+		3AC1B5FD2A214BE300C7FC97 /* WhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */; };
+		5B87F3D12A2679F70000635D /* MonthCycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D02A2679F70000635D /* MonthCycleService.swift */; };
+		5B87F3D32A27C9CF0000635D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D22A27C9CF0000635D /* ContentView.swift */; };
 		BCAC04772A1E869D00065302 /* ProgressViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04762A1E869D00065302 /* ProgressViewCircle.swift */; };
 		BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04782A1E8C9700065302 /* DateTracking.swift */; };
 		BCAC047B2A1FEDC900065302 /* CircleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC047A2A1FEDC900065302 /* CircleText.swift */; };
@@ -15,12 +22,25 @@
 		BCAC04872A21408100065302 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04862A21408100065302 /* DataController.swift */; };
 		BCAC048A2A2140C300065302 /* CycleInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */; };
 		BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E952A1E83D60098BC6E /* ProCycleApp.swift */; };
-		BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977E972A1E83D60098BC6E /* ContentView.swift */; };
 		BF977E9A2A1E83D70098BC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF977E992A1E83D70098BC6E /* Assets.xcassets */; };
 		BF977E9D2A1E83D70098BC6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF977E9C2A1E83D70098BC6E /* Preview Assets.xcassets */; };
+		BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EA52A1E86B00098BC6E /* Slider.swift */; };
+		BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EA82A1E877A0098BC6E /* SliderCell.swift */; };
+		BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */; };
+		BF977EB12A1EA8880098BC6E /* SliderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB02A1EA8880098BC6E /* SliderCellViewModel.swift */; };
+		BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */; };
+		BF977EBF2A2151B60098BC6E /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EBE2A2151B60098BC6E /* CalendarService.swift */; };
+		BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EC02A2151BE0098BC6E /* EventService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A42806E2A21352C00CFA769 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		3A576CD92A279C50002C37E9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3A576CDB2A279F32002C37E9 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		3AC1B5FA2A2143D900C7FC97 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyView.swift; sourceTree = "<group>"; };
+		5B87F3D02A2679F70000635D /* MonthCycleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCycleService.swift; sourceTree = "<group>"; };
+		5B87F3D22A27C9CF0000635D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BCAC04762A1E869D00065302 /* ProgressViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewCircle.swift; sourceTree = "<group>"; };
 		BCAC04782A1E8C9700065302 /* DateTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTracking.swift; sourceTree = "<group>"; };
 		BCAC047A2A1FEDC900065302 /* CircleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleText.swift; sourceTree = "<group>"; };
@@ -30,10 +50,16 @@
 		BCAC04892A2140C300065302 /* CycleInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CycleInfo.xcdatamodel; sourceTree = "<group>"; };
 		BF977E922A1E83D60098BC6E /* ProCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF977E952A1E83D60098BC6E /* ProCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCycleApp.swift; sourceTree = "<group>"; };
-		BF977E972A1E83D60098BC6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF977E992A1E83D70098BC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF977E9C2A1E83D70098BC6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF977E9E2A1E83D70098BC6E /* ProCycle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProCycle.entitlements; sourceTree = "<group>"; };
+		BF977EA52A1E86B00098BC6E /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Slider.swift; path = ProCycle/Components/Slider.swift; sourceTree = SOURCE_ROOT; };
+		BF977EA82A1E877A0098BC6E /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCellModel.swift; sourceTree = "<group>"; };
+		BF977EB02A1EA8880098BC6E /* SliderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCellViewModel.swift; sourceTree = "<group>"; };
+		BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		BF977EBE2A2151B60098BC6E /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
+		BF977EC02A2151BE0098BC6E /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +86,6 @@
 		BCAC04812A21306C00065302 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF977E972A1E83D60098BC6E /* ContentView.swift */,
 				BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */,
 				BCAC04802A212C7F00065302 /* CircleProgressView */,
 			);
@@ -86,6 +111,8 @@
 		BF977E892A1E83D60098BC6E = {
 			isa = PBXGroup;
 			children = (
+				3A576CDB2A279F32002C37E9 /* CoordinatorView.swift */,
+				3A576CD92A279C50002C37E9 /* Coordinator.swift */,
 				BF977E942A1E83D60098BC6E /* ProCycle */,
 				BF977E932A1E83D60098BC6E /* Products */,
 			);
@@ -105,7 +132,15 @@
 				BCAC04832A21309000065302 /* Model */,
 				BCAC04822A21308000065302 /* ViewModel */,
 				BCAC04812A21306C00065302 /* View */,
+				BF977EBD2A2151A90098BC6E /* Service */,
+				BF977EB92A2131980098BC6E /* Model */,
+				BF977EA42A1E86A10098BC6E /* Components */,
+				BF977EB82A21312A0098BC6E /* View */,
+				BF977EB72A2131120098BC6E /* ViewModel */,
 				BF977E952A1E83D60098BC6E /* ProCycleApp.swift */,
+				3A42806E2A21352C00CFA769 /* IntroView.swift */,
+				3AC1B5FA2A2143D900C7FC97 /* AboutView.swift */,
+				3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */,
 				BF977E992A1E83D70098BC6E /* Assets.xcassets */,
 				BF977E9E2A1E83D70098BC6E /* ProCycle.entitlements */,
 				BF977E9B2A1E83D70098BC6E /* Preview Content */,
@@ -120,6 +155,50 @@
 				BF977E9C2A1E83D70098BC6E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF977EA42A1E86A10098BC6E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BF977EA52A1E86B00098BC6E /* Slider.swift */,
+				BF977EA82A1E877A0098BC6E /* SliderCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BF977EB72A2131120098BC6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF977EB02A1EA8880098BC6E /* SliderCellViewModel.swift */,
+				BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BF977EB82A21312A0098BC6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B87F3D22A27C9CF0000635D /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF977EB92A2131980098BC6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF977EBD2A2151A90098BC6E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BF977EBE2A2151B60098BC6E /* CalendarService.swift */,
+				BF977EC02A2151BE0098BC6E /* EventService.swift */,
+				5B87F3D02A2679F70000635D /* MonthCycleService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,13 +273,27 @@
 			files = (
 				BCAC047F2A212C4500065302 /* ProgressViewCircleViewModel.swift in Sources */,
 				BCAC047B2A1FEDC900065302 /* CircleText.swift in Sources */,
-				BF977E982A1E83D60098BC6E /* ContentView.swift in Sources */,
 				BCAC04772A1E869D00065302 /* ProgressViewCircle.swift in Sources */,
 				BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */,
 				BCAC04872A21408100065302 /* DataController.swift in Sources */,
 				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
 				BCAC048A2A2140C300065302 /* CycleInfo.xcdatamodeld in Sources */,
 				BCAC04852A21323A00065302 /* User.swift in Sources */,
+				BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */,
+				3AC1B5FD2A214BE300C7FC97 /* WhyView.swift in Sources */,
+				BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */,
+				BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */,
+				BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */,
+				3AC1B5FB2A2143D900C7FC97 /* AboutView.swift in Sources */,
+				BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */,
+				3A42806F2A21352C00CFA769 /* IntroView.swift in Sources */,
+				3A576CDA2A279C50002C37E9 /* Coordinator.swift in Sources */,
+				3A576CDC2A279F32002C37E9 /* CoordinatorView.swift in Sources */,
+				BF977EB12A1EA8880098BC6E /* SliderCellViewModel.swift in Sources */,
+				5B87F3D32A27C9CF0000635D /* ContentView.swift in Sources */,
+				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
+				5B87F3D12A2679F70000635D /* MonthCycleService.swift in Sources */,
+				BF977EBF2A2151B60098BC6E /* CalendarService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,23 +419,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProCycle/ProCycle.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProCycle/Preview Content\"";
-				DEVELOPMENT_TEAM = 9569K2P89M;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studies.s.ProCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -354,23 +450,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProCycle/ProCycle.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProCycle/Preview Content\"";
-				DEVELOPMENT_TEAM = 9569K2P89M;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studies.s.ProCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

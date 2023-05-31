@@ -12,9 +12,10 @@ struct ProCycleApp: App {
     @StateObject private var dataController = DataController()
 
     var body: some Scene {
-        WindowGroup {
+        WindowGroup{
             ContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+
         }
     }
 }
