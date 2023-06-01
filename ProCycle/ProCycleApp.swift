@@ -13,9 +13,11 @@ struct ProCycleApp: App {
 
     var body: some Scene {
         WindowGroup{
-            ContentView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
-
+            NavigationStack{
+                ContentView()
+                    .environment(\.managedObjectContext, dataController.container.viewContext)
+                
+            }
         }
     }
 }

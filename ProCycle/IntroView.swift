@@ -10,7 +10,6 @@ import SwiftUI
 
 struct IntroView: View {
     
-    @EnvironmentObject private var coordinator: Coordinator
     
     //Getting window size
     var window = NSScreen.main?.visibleFrame
@@ -19,7 +18,7 @@ struct IntroView: View {
             Color.purple
                 .ignoresSafeArea()
             VStack{
-                Color.blue
+                
                 Text("Olá!!")
                     .font(.system(size: window!.width / 40, weight: .semibold, design: .rounded))
                     .foregroundColor(.black)
@@ -39,19 +38,17 @@ struct IntroView: View {
                     .frame(width: window!.width / 2, height: window!.height / 4)
                 
 
-                  Button(action: {
-                      coordinator.push(.about)
-                  }, label: {
-                    Text("Continuar")
-                          .font(.system(size: window!.width / 80, weight: .semibold, design: .rounded))
-                          .foregroundColor(.black)
-                          .padding(14)
-                          .background(.white)
-                          .cornerRadius(20)
-                          .frame(width: window!.width / 3, height: window!.height / 6)
-                  })
-                
-                
+                NavigationLink {
+                                    AboutView()
+                                        .navigationBarBackButtonHidden()
+                                } label: {
+                                    Text("Continuar")
+                                        .font(.system(size: 20, weight: .semibold, design: .rounded))
+                                        .foregroundColor(.black)
+                                }.buttonStyle(.borderless)
+                                .padding(14)
+                                .background(.white)
+                                .cornerRadius(20)
                 
             }
         }

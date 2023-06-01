@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AboutView: View {
     
-    @EnvironmentObject private var coordinator: Coordinator
     
     var window = NSScreen.main?.visibleFrame
     var body: some View {
@@ -38,17 +37,17 @@ struct AboutView: View {
                     .frame(width: window!.width / 2, height: window!.height / 6)
                 
             
-                Button(action: {
-                    coordinator.push(.why)
-                }, label: {
-                  Text("Continuar")
-                        .font(.system(size: window!.width / 80, weight: .semibold, design: .rounded))
-                        .foregroundColor(.black)
-                        .padding(14)
-                        .background(.white)
-                        .cornerRadius(20)
-                        .frame(width: window!.width / 3, height: window!.height / 6)
-                })
+                NavigationLink {
+                                    WhyView()
+                                        .navigationBarBackButtonHidden()
+                                } label: {
+                                    Text("Continuar")
+                                        .font(.system(size: 20, weight: .semibold, design: .rounded))
+                                        .foregroundColor(.black)
+                                }.buttonStyle(.borderless)
+                                .padding(14)
+                                .background(.white)
+                                .cornerRadius(20)
                 
             }
         }
