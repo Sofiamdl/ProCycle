@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum CyclePhase {
-    case folicular
-    case menstruation
-    case luteal
-    case fertile
-    case expectedMenstruation
-    case none
-    case pms
+enum CyclePhase: String {
+    case folicular = "⚡️ Fase folicular"
+    case menstruation = "🩸 Menstruação"
+    case luteal  = "⬛️ Fase lútea"
+    case fertile =  "💓 Período fertil"
+    case expectedMenstruation = "Menstruação Prevista"
+    case none = "none"
+    case pms = "😡 TPM"
 }
 
 struct SliderCellModel: Hashable {

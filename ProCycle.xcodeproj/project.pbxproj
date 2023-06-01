@@ -24,6 +24,8 @@
 		BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */; };
 		BF977EBF2A2151B60098BC6E /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EBE2A2151B60098BC6E /* CalendarService.swift */; };
 		BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EC02A2151BE0098BC6E /* EventService.swift */; };
+		BFBAE42C2A282B560095A44D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBAE42B2A282B560095A44D /* Date.swift */; };
+		BFBAE42E2A2836AE0095A44D /* CalculateCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBAE42D2A2836AE0095A44D /* CalculateCycle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		BF977EBE2A2151B60098BC6E /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		BF977EC02A2151BE0098BC6E /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		BFBAE42B2A282B560095A44D /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BFBAE42D2A2836AE0095A44D /* CalculateCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCycle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		BF977E942A1E83D60098BC6E /* ProCycle */ = {
 			isa = PBXGroup;
 			children = (
+				BFBAE42A2A282B4A0095A44D /* Extension */,
 				BF977EBD2A2151A90098BC6E /* Service */,
 				BF977EB92A2131980098BC6E /* Model */,
 				BF977EA42A1E86A10098BC6E /* Components */,
@@ -144,8 +149,17 @@
 				BF977EBE2A2151B60098BC6E /* CalendarService.swift */,
 				BF977EC02A2151BE0098BC6E /* EventService.swift */,
 				5B87F3D02A2679F70000635D /* MonthCycleService.swift */,
+				BFBAE42D2A2836AE0095A44D /* CalculateCycle.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		BFBAE42A2A282B4A0095A44D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BFBAE42B2A282B560095A44D /* Date.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +235,8 @@
 				BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */,
 				3AC1B5FD2A214BE300C7FC97 /* WhyView.swift in Sources */,
 				BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */,
+				BFBAE42C2A282B560095A44D /* Date.swift in Sources */,
+				BFBAE42E2A2836AE0095A44D /* CalculateCycle.swift in Sources */,
 				BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */,
 				BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */,
 				3AC1B5FB2A2143D900C7FC97 /* AboutView.swift in Sources */,

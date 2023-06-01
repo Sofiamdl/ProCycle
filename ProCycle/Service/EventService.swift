@@ -28,8 +28,6 @@ struct EventService{
     
     func getEventsByDate(firstDate: Date, finalDate: Date, calendar: EKCalendar?) -> [EKEvent] {
         if let calendar = calendar {
-            let monthsAfter = Date(timeIntervalSinceNow: 100*24*3600)
-            
             let predicate =  eventStore.predicateForEvents(withStart: firstDate, end: finalDate, calendars: [calendar])
             let events = eventStore.events(matching: predicate)
             
@@ -40,7 +38,7 @@ struct EventService{
     
     
     func removeElementsInCalendarBy(menstruationDate: Date, calendar: EKCalendar) {
-        let monthsAfter = Date(timeIntervalSinceNow: 100*24*3600)
+        let monthsAfter = Date().daysAfter(200)
         let events = getEventsByDate(firstDate: menstruationDate, finalDate: monthsAfter, calendar: calendar)
         for event in events {
             removeEvent(eventId: event.calendarItemIdentifier)
@@ -64,9 +62,25 @@ struct EventService{
         }
     }
     
-    func calculateFutureEvents(menstruationDate: Date, calendar: EKCalendar) {
-        let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
-        let events = getEventsByDate(firstDate: monthsBefore, finalDate: menstruationDate, calendar: calendar)
-        return
+    func makeDictionaryOfEvents(events: [EKEvent]) -> [String: EKEvent] {
+        var eventsAux = [String: EKEvent]()
+        for event in events {
+            let eventDays = event.startDate.daysBetween(event.endDate)
+            for day in 0...eventDays {
+                let modifiedDate = event.startDate.daysAfter(day)
+                eventsAux[modifiedDate.formatted(date: .complete, time: .omitted)] = event
+            }
+        }
+        return eventsAux
+    }
+    
+    func eventsBefore(daysBefore: Int, finalDate: Date, calendar: EKCalendar) -> [EKEvent] {
+        let daysBeforeDate = finalDate.daysBefore(daysBefore)
+        return getEventsByDate(firstDate: daysBeforeDate, finalDate: finalDate, calendar: calendar)
+    }
+    
+    func eventsAfter(daysAfter: Int, startDate: Date, calendar: EKCalendar) -> [EKEvent] {
+        let daysAfterDate = startDate.daysAfter(daysAfter)
+        return getEventsByDate(firstDate: startDate, finalDate: daysAfterDate, calendar: calendar)
     }
 }
