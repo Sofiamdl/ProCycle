@@ -29,7 +29,7 @@ struct Slider: View {
 //                    print(scrollPosition)
                 }
             }
-            .frame(maxWidth: 300, maxHeight: 150)
+            .frame(maxHeight: 150)
             .onAppear {
                 value.scrollTo(100, anchor: .center)
             }
@@ -38,7 +38,7 @@ struct Slider: View {
 //                calendar.todaysEvents()
             }
         }
-        .background(.black)
+        .background(CustomColor.persianIndigo)
         
     }
     

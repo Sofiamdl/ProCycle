@@ -14,6 +14,7 @@
 		3AC1B5FD2A214BE300C7FC97 /* WhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */; };
 		5B87F3D12A2679F70000635D /* MonthCycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D02A2679F70000635D /* MonthCycleService.swift */; };
 		5B87F3D32A27C9CF0000635D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D22A27C9CF0000635D /* ContentView.swift */; };
+		5B87F3D62A2912290000635D /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D52A2912290000635D /* CustomColors.swift */; };
 		BCAC04772A1E869D00065302 /* ProgressViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04762A1E869D00065302 /* ProgressViewCircle.swift */; };
 		BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC04782A1E8C9700065302 /* DateTracking.swift */; };
 		BCAC047B2A1FEDC900065302 /* CircleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC047A2A1FEDC900065302 /* CircleText.swift */; };
@@ -42,6 +43,7 @@
 		3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyView.swift; sourceTree = "<group>"; };
 		5B87F3D02A2679F70000635D /* MonthCycleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCycleService.swift; sourceTree = "<group>"; };
 		5B87F3D22A27C9CF0000635D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5B87F3D52A2912290000635D /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		BCAC04762A1E869D00065302 /* ProgressViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewCircle.swift; sourceTree = "<group>"; };
 		BCAC04782A1E8C9700065302 /* DateTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTracking.swift; sourceTree = "<group>"; };
 		BCAC047A2A1FEDC900065302 /* CircleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleText.swift; sourceTree = "<group>"; };
@@ -75,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B87F3D42A27E8350000635D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3A42806E2A21352C00CFA769 /* IntroView.swift */,
+				3AC1B5FA2A2143D900C7FC97 /* AboutView.swift */,
+				3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		BCAC04802A212C7F00065302 /* CircleProgressView */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,26 +100,22 @@
 		BCAC04812A21306C00065302 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B87F3D42A27E8350000635D /* Onboarding */,
+				5B87F3D22A27C9CF0000635D /* ContentView.swift */,
 				BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */,
 				BCAC04802A212C7F00065302 /* CircleProgressView */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		BCAC04822A21308000065302 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		BCAC04832A21309000065302 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */,
 				BCAC04842A21323A00065302 /* User.swift */,
 				BCAC048B2A27D8A700065302 /* Cycle.swift */,
 				BCAC04862A21408100065302 /* DataController.swift */,
+				5B87F3D52A2912290000635D /* CustomColors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,17 +142,11 @@
 			isa = PBXGroup;
 			children = (
 				BCAC04832A21309000065302 /* Model */,
-				BCAC04822A21308000065302 /* ViewModel */,
 				BCAC04812A21306C00065302 /* View */,
 				BF977EBD2A2151A90098BC6E /* Service */,
-				BF977EB92A2131980098BC6E /* Model */,
 				BF977EA42A1E86A10098BC6E /* Components */,
-				BF977EB82A21312A0098BC6E /* View */,
 				BF977EB72A2131120098BC6E /* ViewModel */,
 				BF977E952A1E83D60098BC6E /* ProCycleApp.swift */,
-				3A42806E2A21352C00CFA769 /* IntroView.swift */,
-				3AC1B5FA2A2143D900C7FC97 /* AboutView.swift */,
-				3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */,
 				BF977E992A1E83D70098BC6E /* Assets.xcassets */,
 				BF977E9E2A1E83D70098BC6E /* ProCycle.entitlements */,
 				BF977E9B2A1E83D70098BC6E /* Preview Content */,
@@ -172,26 +174,11 @@
 		BF977EB72A2131120098BC6E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BCAC047E2A212C4500065302 /* ProgressViewCircleViewModel.swift */,
 				BF977EB02A1EA8880098BC6E /* SliderCellViewModel.swift */,
 				BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BF977EB82A21312A0098BC6E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5B87F3D22A27C9CF0000635D /* ContentView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BF977EB92A2131980098BC6E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BF977EAC2A1E92380098BC6E /* SliderCellModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		BF977EBD2A2151A90098BC6E /* Service */ = {
@@ -290,6 +277,7 @@
 				3AC1B5FB2A2143D900C7FC97 /* AboutView.swift in Sources */,
 				BCAC048C2A27D8A700065302 /* Cycle.swift in Sources */,
 				BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */,
+				5B87F3D62A2912290000635D /* CustomColors.swift in Sources */,
 				3A42806F2A21352C00CFA769 /* IntroView.swift in Sources */,
 				3A576CDA2A279C50002C37E9 /* Coordinator.swift in Sources */,
 				3A576CDC2A279F32002C37E9 /* CoordinatorView.swift in Sources */,
