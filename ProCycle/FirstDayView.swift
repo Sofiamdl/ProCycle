@@ -36,11 +36,11 @@ struct FirstDayView: View {
                     .foregroundColor(CustomColor.rustyRed)
                     .multilineTextAlignment(.center)
                     .frame(width: window!.width / 2, height: window!.height / 5)
-            
+                
                 VStack (spacing: 50){
                     DatePicker("", selection: $date, in: ...Date(), displayedComponents: [.date])
                         .accentColor(CustomColor.persianIndigo)
-                                      
+                    
                         .datePickerStyle(.compact)
                         .padding(10)
                         .frame(width: 400)
@@ -54,10 +54,11 @@ struct FirstDayView: View {
                         Text("Continuar")
                             .font(.system(size: 20, weight: .semibold, design: .rounded))
                             .foregroundColor(CustomColor.notWhite)
-                    }.buttonStyle(.borderless)
-                        .padding(14)
-                        .background(CustomColor.persianIndigo)
-                        .cornerRadius(20)
+                    }
+                    .buttonStyle(.borderless)
+                    .padding(14)
+                    .background(CustomColor.persianIndigo)
+                    .cornerRadius(20)
                 }
                 
             }

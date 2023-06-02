@@ -8,62 +8,71 @@
 import SwiftUI
 
 struct MenstruationView: View {
-    
-    var window = NSScreen.main?.visibleFrame
-    
-    @State private var date = Date()
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter
-    }()
+    @State private var question: Int = 1
     
     var body: some View {
-        
         ZStack{
             CustomColor.notWhite
-            
             Image("background")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
-            
-            
-            VStack{
-                
-                Text("Quantos dias dura a sua menstruação?")
-                    .font(.system(size: 40, weight: .bold, design: .default))
-                    .foregroundColor(CustomColor.rustyRed)
-                    .multilineTextAlignment(.center)
-                    .frame(width: window!.width / 2, height: window!.height / 5)
-            
-                VStack (spacing: 50){
-                    DatePicker("", selection: $date, in: ...Date(), displayedComponents: [.date])
-                        .accentColor(CustomColor.persianIndigo)
-                                      
-                        .datePickerStyle(.compact)
-                        .padding(10)
-                        .frame(width: 400)
-                        .background(CustomColor.lightGrey)
-                        .cornerRadius(10)
-                    
-                    NavigationLink {
-                        AboutView() //Mudar essa pra proxima pagina
-                            .navigationBarBackButtonHidden()
-                    } label: {
-                        Text("Continuar")
-                            .font(.system(size: 20, weight: .semibold, design: .rounded))
-                            .foregroundColor(CustomColor.notWhite)
-                    }.buttonStyle(.borderless)
-                        .padding(14)
-                        .background(CustomColor.persianIndigo)
-                        .cornerRadius(20)
+            VStack {
+                if (question == 1) {
+                    questionOne
+                } else {
+                    questionTwo
                 }
-                
             }
         }
     }
     
+    var questionOne: some View {
+        VStack {
+            Text("Quantos dias dura a sua menstruação?")
+                .font(.system(size: 40, weight: .bold, design: .default))
+                .foregroundColor(CustomColor.rustyRed)
+                .multilineTextAlignment(.center)
+                .padding(EdgeInsets(top: 0, leading: 182, bottom: 40, trailing: 182))
+            DayStepperView()
+                .padding(.bottom, 40)
+            Text("Continuar")
+                .font(.system(size: 20, weight: .semibold, design: .rounded))
+                .foregroundColor(CustomColor.notWhite)
+                .buttonStyle(.borderless)
+                .padding(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20))
+                .background(CustomColor.persianIndigo)
+                .cornerRadius(12)
+                .onTapGesture {
+                    question = 2
+                }
+            
+        }
+    }
+    
+    var questionTwo: some View {
+        VStack {
+            Text("Quanto tempo dura o seu ciclo menstrual?")
+                .font(.system(size: 40, weight: .bold, design: .default))
+                .foregroundColor(CustomColor.rustyRed)
+                .multilineTextAlignment(.center)
+                .padding(EdgeInsets(top: 0, leading: 182, bottom: 40, trailing: 182))
+            DayStepperView()
+                .padding(.bottom, 40)
+            NavigationLink {
+                ContentView()
+            } label: {
+                Text("Continuar")
+                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    .foregroundColor(CustomColor.notWhite)
+            }
+            .buttonStyle(.borderless)
+            .padding(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20))
+            .background(CustomColor.persianIndigo)
+            .cornerRadius(12)
+            
+        }
+    }
 }
 
 
