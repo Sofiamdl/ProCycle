@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1430"
-   version = "1.7">
+   version = "1.8">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF977E912A1E83D60098BC6E"
-               BuildableName = "ProCycle.app"
-               BlueprintName = "ProCycle"
-               ReferencedContainer = "container:ProCycle.xcodeproj">
+               BuildableName = "Luna.app"
+               BlueprintName = "Luna"
+               ReferencedContainer = "container:Luna.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +28,8 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -44,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF977E912A1E83D60098BC6E"
-            BuildableName = "ProCycle.app"
-            BlueprintName = "ProCycle"
-            ReferencedContainer = "container:ProCycle.xcodeproj">
+            BuildableName = "Luna.app"
+            BlueprintName = "Luna"
+            ReferencedContainer = "container:Luna.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF977E912A1E83D60098BC6E"
-            BuildableName = "ProCycle.app"
-            BlueprintName = "ProCycle"
-            ReferencedContainer = "container:ProCycle.xcodeproj">
+            BuildableName = "Luna.app"
+            BlueprintName = "Luna"
+            ReferencedContainer = "container:Luna.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

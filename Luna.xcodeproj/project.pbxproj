@@ -56,7 +56,7 @@
 		BCAC04862A21408100065302 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BCAC04892A2140C300065302 /* CycleInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CycleInfo.xcdatamodel; sourceTree = "<group>"; };
 		BCAC048B2A27D8A700065302 /* Cycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cycle.swift; sourceTree = "<group>"; };
-		BF977E922A1E83D60098BC6E /* ProCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF977E922A1E83D60098BC6E /* Luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF977E952A1E83D60098BC6E /* ProCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCycleApp.swift; sourceTree = "<group>"; };
 		BF977E992A1E83D70098BC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF977E9C2A1E83D70098BC6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		BF977E932A1E83D60098BC6E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF977E922A1E83D60098BC6E /* ProCycle.app */,
+				BF977E922A1E83D60098BC6E /* Luna.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,9 +203,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF977E912A1E83D60098BC6E /* ProCycle */ = {
+		BF977E912A1E83D60098BC6E /* Luna */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF977EA12A1E83D70098BC6E /* Build configuration list for PBXNativeTarget "ProCycle" */;
+			buildConfigurationList = BF977EA12A1E83D70098BC6E /* Build configuration list for PBXNativeTarget "Luna" */;
 			buildPhases = (
 				BF977E8E2A1E83D60098BC6E /* Sources */,
 				BF977E8F2A1E83D60098BC6E /* Frameworks */,
@@ -215,9 +215,9 @@
 			);
 			dependencies = (
 			);
-			name = ProCycle;
+			name = Luna;
 			productName = ProCycle;
-			productReference = BF977E922A1E83D60098BC6E /* ProCycle.app */;
+			productReference = BF977E922A1E83D60098BC6E /* Luna.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF977E8D2A1E83D60098BC6E /* Build configuration list for PBXProject "ProCycle" */;
+			buildConfigurationList = BF977E8D2A1E83D60098BC6E /* Build configuration list for PBXProject "Luna" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -248,7 +248,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF977E912A1E83D60098BC6E /* ProCycle */,
+				BF977E912A1E83D60098BC6E /* Luna */,
 			);
 		};
 /* End PBXProject section */
@@ -482,7 +482,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF977E8D2A1E83D60098BC6E /* Build configuration list for PBXProject "ProCycle" */ = {
+		BF977E8D2A1E83D60098BC6E /* Build configuration list for PBXProject "Luna" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF977E9F2A1E83D70098BC6E /* Debug */,
@@ -491,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF977EA12A1E83D70098BC6E /* Build configuration list for PBXNativeTarget "ProCycle" */ = {
+		BF977EA12A1E83D70098BC6E /* Build configuration list for PBXNativeTarget "Luna" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF977EA22A1E83D70098BC6E /* Debug */,

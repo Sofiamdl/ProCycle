@@ -13,6 +13,8 @@ struct FirstDayView: View {
     var window = NSScreen.main?.visibleFrame
     
     @State private var date = Date()
+    @AppStorage("date") private var initialDate = 0
+    
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
@@ -57,6 +59,8 @@ struct FirstDayView: View {
                         .cornerRadius(10)
                     
                     NavigationLink {
+                        // daysbetween
+                        
                         MenstruationView()
                             .navigationBarBackButtonHidden()
                     } label: {
