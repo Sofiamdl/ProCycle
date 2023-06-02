@@ -9,7 +9,10 @@ import Foundation
 import SwiftUI
 
 struct DayStepperView: View {
-    @State var day: Int = 1
+    @State var day: Int
+    init(day: Int) {
+        self.day = day
+    }
     
     var body: some View {
         HStack {
@@ -53,7 +56,7 @@ struct DayStepperView: View {
     
     struct DayStepperView_Previews: PreviewProvider {
         static var previews: some View {
-            DayStepperView()
+            DayStepperView(day: 5)
         }
     }
 }

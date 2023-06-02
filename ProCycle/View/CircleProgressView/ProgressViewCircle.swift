@@ -24,7 +24,7 @@ struct CircularProgressView: View {
             Circle()
                 .trim(from: 0.0, to: 0.90)
                 .stroke(
-                    Color.indigo,
+                    CustomColor.persianIndigo,
                     style: StrokeStyle(lineWidth: circleFrame/10,
                                        lineCap: .round,
                                        lineJoin: .round))
@@ -33,7 +33,7 @@ struct CircularProgressView: View {
             Circle()
                 .trim(from: 0.0, to: 0.20)
                 .stroke(
-                    Color.pink,
+                    CustomColor.rustyRed,
                     style: StrokeStyle(lineWidth: circleFrame/10,
                                        lineCap: .round,
                                        lineJoin: .round))
@@ -43,7 +43,7 @@ struct CircularProgressView: View {
             Circle()
                 .trim(from: 0.50, to: 0.70)
                 .stroke(
-                    Color.blue,
+                    CustomColor.brightBlue,
                     style: StrokeStyle(lineWidth: circleFrame/10,
                                        lineCap: .round,
                                        lineJoin: .round))
@@ -54,6 +54,7 @@ struct CircularProgressView: View {
                     ZStack {
                         Circle()
                             .frame(width: circleFrame/1.5)
+                            .foregroundColor(CustomColor.lightGrey)
 //                        Text(viewModel.getDate())
 //                            .foregroundColor(Color.indigo)
 //                            .font(.title2)
@@ -61,12 +62,12 @@ struct CircularProgressView: View {
                         
                             
                         Text("DIA")
-                            .foregroundColor(Color.indigo)
-                            .font(.title3)
+                                .foregroundColor(CustomColor.persianIndigo)
+                                .font(.system(size:12))
                         //add o dia do ciclo aqui!!!!!!
                         Text("02")
-                            .foregroundColor(Color.indigo)
-                            .font(.largeTitle)
+                            .foregroundColor(CustomColor.persianIndigo)
+                            .font(.system(size:40,weight: .heavy))
                         }
 //                        CircleText(radius: circleFrame/2, text: "Período menstrual")
 //                            .rotationEffect((Angle(degrees: 30)))

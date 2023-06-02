@@ -13,4 +13,5 @@ struct CustomColor {
     static let notWhite = Color("notWhite")
     static let persianIndigo = Color("persianIndigo")
     static let lightGrey = Color("lightGrey")
+    static let brightBlue = Color ("Bright Blue")
 }

@@ -34,7 +34,7 @@ struct MenstruationView: View {
                 .foregroundColor(CustomColor.rustyRed)
                 .multilineTextAlignment(.center)
                 .padding(EdgeInsets(top: 0, leading: 182, bottom: 40, trailing: 182))
-            DayStepperView()
+            DayStepperView(day: 5)
                 .padding(.bottom, 40)
             Text("Continuar")
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
@@ -57,7 +57,7 @@ struct MenstruationView: View {
                 .foregroundColor(CustomColor.rustyRed)
                 .multilineTextAlignment(.center)
                 .padding(EdgeInsets(top: 0, leading: 182, bottom: 40, trailing: 182))
-            DayStepperView()
+            DayStepperView(day: 28)
                 .padding(.bottom, 40)
             NavigationLink {
                 ContentView()
