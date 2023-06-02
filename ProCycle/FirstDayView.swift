@@ -21,45 +21,44 @@ struct FirstDayView: View {
     var body: some View {
         
         ZStack{
-            Color.purple
+            CustomColor.notWhite
+            
+            Image("background")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
-    
+            
+            
             VStack{
                 
                 Text("Qual o primeiro dia da sua última menstruação?")
-                    .font(.system(size: window!.width / 50, weight: .semibold, design: .rounded))
-                    .foregroundColor(.black)
+                    .font(.system(size: 40, weight: .bold, design: .default))
+                    .foregroundColor(CustomColor.rustyRed)
                     .multilineTextAlignment(.center)
-                    .frame(width: window!.width / 2, height: window!.height / 6)
-                
-                VStack(alignment: .center){
-                    
+                    .frame(width: window!.width / 2, height: window!.height / 5)
+            
+                VStack (spacing: 50){
                     DatePicker("", selection: $date, in: ...Date(), displayedComponents: [.date])
-                        .datePickerStyle(.graphical)
-                        .padding(.leading)
+                        .accentColor(CustomColor.persianIndigo)
+                                      
+                        .datePickerStyle(.compact)
+                        .padding(10)
+                        .frame(width: 400)
+                        .background(CustomColor.lightGrey)
+                        .cornerRadius(10)
                     
-                    
-                    
-                    Text("Você selecionou: \(date, formatter: dateFormatter)")
-                        .font(.system(size: window!.width / 80, weight: .semibold, design: .rounded))
-                        .foregroundColor(.black)
-                        .multilineTextAlignment(.center)
-                        .frame(width: 200, height: 200)
+                    NavigationLink {
+                        AboutView() //Mudar essa pra proxima pagina
+                            .navigationBarBackButtonHidden()
+                    } label: {
+                        Text("Continuar")
+                            .font(.system(size: 20, weight: .semibold, design: .rounded))
+                            .foregroundColor(CustomColor.notWhite)
+                    }.buttonStyle(.borderless)
+                        .padding(14)
+                        .background(CustomColor.persianIndigo)
+                        .cornerRadius(20)
                 }
-                
-                
-                NavigationLink {
-                    AboutView() //Mudar essa pra proxima pagina 
-                        .navigationBarBackButtonHidden()
-                } label: {
-                    Text("Continuar")
-                        .font(.system(size: 20, weight: .semibold, design: .rounded))
-                        .foregroundColor(.black)
-                }.buttonStyle(.borderless)
-                    .padding(14)
-                    .background(.white)
-                    .cornerRadius(20)
-                
                 
             }
         }

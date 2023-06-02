@@ -14,7 +14,7 @@ struct ProCycleApp: App {
     var body: some Scene {
         WindowGroup{
             NavigationStack{
-                ContentView()
+                FirstDayView()
                     .environment(\.managedObjectContext, dataController.container.viewContext)
                 
             }
