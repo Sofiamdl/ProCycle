@@ -1,13 +1,13 @@
 //
-//  FirstDayView.swift
+//  MenstruationView.swift
 //  ProCycle
 //
-//  Created by Joana Lima on 01/06/23.
+//  Created by lrsv on 01/06/23.
 //
 
 import SwiftUI
 
-struct FirstDayView: View {
+struct MenstruationView: View {
     
     var window = NSScreen.main?.visibleFrame
     
@@ -31,7 +31,7 @@ struct FirstDayView: View {
             
             VStack{
                 
-                Text("Qual o primeiro dia da sua última menstruação?")
+                Text("Quantos dias dura a sua menstruação?")
                     .font(.system(size: 40, weight: .bold, design: .default))
                     .foregroundColor(CustomColor.rustyRed)
                     .multilineTextAlignment(.center)
@@ -48,7 +48,7 @@ struct FirstDayView: View {
                         .cornerRadius(10)
                     
                     NavigationLink {
-                        MenstruationView()
+                        AboutView() //Mudar essa pra proxima pagina
                             .navigationBarBackButtonHidden()
                     } label: {
                         Text("Continuar")
@@ -69,8 +69,8 @@ struct FirstDayView: View {
 
 
 
-struct FirstDayView_Previews: PreviewProvider {
+struct MenstruationView_Previews: PreviewProvider {
     static var previews: some View {
-        FirstDayView()
+        MenstruationView()
     }
 }
