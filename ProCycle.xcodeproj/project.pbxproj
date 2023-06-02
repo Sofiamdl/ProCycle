@@ -32,6 +32,7 @@
 		BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */; };
 		BF977EBF2A2151B60098BC6E /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EBE2A2151B60098BC6E /* CalendarService.swift */; };
 		BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EC02A2151BE0098BC6E /* EventService.swift */; };
+		EBC2BAB02A29192A00DB4E10 /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2BAAF2A29192A00DB4E10 /* CreateEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		BF977EBE2A2151B60098BC6E /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		BF977EC02A2151BE0098BC6E /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		EBC2BAAF2A29192A00DB4E10 /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,12 @@
 		BCAC04812A21306C00065302 /* View */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
+=======
+				EBC2BAAE2A29191700DB4E10 /* CreateEvent */,
+				5B87F3D42A27E8350000635D /* Onboarding */,
+				5B87F3D22A27C9CF0000635D /* ContentView.swift */,
+>>>>>>> Stashed changes
 				BCAC04882A2140C200065302 /* CycleInfo.xcdatamodeld */,
 				BCAC04802A212C7F00065302 /* CircleProgressView */,
 			);
@@ -204,6 +212,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		EBC2BAAE2A29191700DB4E10 /* CreateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				EBC2BAAF2A29192A00DB4E10 /* CreateEventView.swift */,
+			);
+			path = CreateEvent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +292,7 @@
 			files = (
 				BCAC047F2A212C4500065302 /* ProgressViewCircleViewModel.swift in Sources */,
 				BCAC047B2A1FEDC900065302 /* CircleText.swift in Sources */,
+				EBC2BAB02A29192A00DB4E10 /* CreateEventView.swift in Sources */,
 				BCAC04772A1E869D00065302 /* ProgressViewCircle.swift in Sources */,
 				BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */,
 				BCAC04872A21408100065302 /* DataController.swift in Sources */,

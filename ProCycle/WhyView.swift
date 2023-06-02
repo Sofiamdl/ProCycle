@@ -40,6 +40,10 @@ struct WhyView: View {
                     .cornerRadius(20)
                     .frame(width: window!.width / 3, height: window!.height / 6)
                 
+                Button("Botao") {
+                    coordinator.push(.home)
+                }
+                
             }
         }
     }

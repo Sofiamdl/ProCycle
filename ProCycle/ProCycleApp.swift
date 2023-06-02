@@ -13,7 +13,8 @@ struct ProCycleApp: App {
 
     var body: some Scene {
         WindowGroup{
-            ContentView()
+            CoordinatorView()
+                .preferredColorScheme(.light)
                 .environment(\.managedObjectContext, dataController.container.viewContext)
 
         }

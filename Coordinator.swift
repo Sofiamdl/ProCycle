@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Page: String, Identifiable{
-    case intro, about, why
+    case intro, about, why, createEvent, home
     
     var id: String{
         self.rawValue
@@ -37,17 +37,19 @@ class Coordinator: ObservableObject{
     func build(page: Page) -> some View{
         switch page {
         case .intro:
+            IntroView()
             
-                IntroView()
-
         case .about:
-         
-                AboutView()
+            AboutView()
             
         case .why:
-           
-                WhyView()
+            WhyView()
             
+        case .createEvent:
+            CreateEventView()
+            
+        case .home:
+            ContentView()
         }
     }
     

@@ -26,6 +26,10 @@ class CalendarViewModel: ObservableObject {
         loadEventsOfCalendar()
     }
     
+    func get() {
+        
+    }
+    
     func loadEventsOfCalendar() {
         let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
         
@@ -97,6 +101,43 @@ class CalendarViewModel: ObservableObject {
         for (title, startDate, endDate) in phases {
             createEvent(title: title, startDate: startDate, endDate: endDate)
         }
+        
+    }
+    
+    func getPhaseFromDate(startDate: Date) -> String {
+        let monthsBefore = Date(timeIntervalSinceNow: -100*24*3600)
+        let events = eventService.getEventsByDate(firstDate: startDate, finalDate: startDate, calendar: calendar.calendar)
+        return events.first?.title ?? ""
+    }
+    
+    func logic(eventTag: Tag, startDate: Date) {
+        let phase = getPhaseFromDate(startDate: startDate)
+        handleEntertainmentLogic(startDate: startDate, phase: phase)
+        
+    }
+    
+    func handleEntertainmentLogic(startDate: Date, phase: String) {
+        var suggestions: [Date] = []
+        if (phase == "🩸 Menstruação") {
+            // cria e retorna
+        }
+        
+        // cria e adiciona na lista uma sugestão do evento na fase lutea:
+        
+        // pegar o calendario dos proximos 28 dias
+        let events = eventService.getEventsByDate(firstDate: startDate, finalDate: startDate.advanced(by: 28*24*3600), calendar: calendar.calendar)
+        let dicEvents = makeDictionaryOfEvents(events: events)
+        
+        // ver o periodo, nesse calendario, em que a pessoa está na fase lutea
+        let newFaveDays = dicEvents.filter({$0.value.title == "⬛️ Fase lútea"})
+        
+        // adicionar na tabela a sugestão do evento no primeiro dia dessa fase
+        suggestions.append(Date(from: newFaveDays.first!.key as! Decoder))
+        
+        
+        // cria e adiciona na lista uma sugestão do evento na fase folicular
+        // cria e adiciona na lista uma sugestão do evento na fase fertil
+        
         
     }
     

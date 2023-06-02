@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var circleFrame: CGFloat = 450
     @Environment(\.managedObjectContext) var moc
+    @EnvironmentObject private var coordinator: Coordinator
     @FetchRequest(sortDescriptors: []) var cycles: FetchedResults<CycleInfos>
     @ObservedObject var calendar = CalendarViewModel()
     @State var daysAfterMenstruation = "15"
@@ -21,6 +22,7 @@ struct ContentView: View {
         VStack {
             Slider()
             VStack {
+<<<<<<< Updated upstream
                 CircularProgressView(circleFrame: $circleFrame)
                     .onAppear {
                     let cycleInfo = CycleInfos(context: moc)
@@ -28,6 +30,40 @@ struct ContentView: View {
                     cycleInfo.phaseExpandedDescription = "ab"
                     cycleInfo.phaseName = "c"
                     try? moc.save()
+=======
+                Slider()
+                Spacer()
+                
+            }
+                VStack {
+                    HStack (spacing: 70) {
+                         Spacer()
+                         CircularProgressView(circleFrame: $circleFrame)
+                             .onAppear {
+                                 let cycleInfo = CycleInfos(context: moc)
+                                 cycleInfo.phaseDescription = "a"
+                                 cycleInfo.phaseExpandedDescription = "ab"
+                                 cycleInfo.phaseName = "c"
+                                 try? moc.save()
+                             }
+                             .padding()
+                         VStack (spacing: 8){
+                             Text ("Você está na menstruação.")
+                                 .font(.system(size: 36, weight: .heavy))
+                                 .foregroundColor(.red)
+                                 .frame(maxWidth: .infinity, alignment: .leading)
+                             Text ("Níveis mais baixos de energia, capacidade de concentração e produtividade. Reduza tarefas de trabalho e administrativas em geral, e evite a pressão de prazos inflexíveis." + "\n" + "\n" + "Níveis mais baixos de energia, capacidade de concentração e produtividade. Reduza tarefas de trabalho e administrativas em geral, e evite a pressão de prazos inflexíveis.")
+                                 .font(.system(size: 14, weight: .light, design: .rounded))
+                                 .frame(maxWidth: .infinity, alignment: .leading)
+                                 .foregroundColor(CustomColor.persianIndigo)
+                         }
+                     }
+                    Button("botao") {
+                        coordinator.push(.createEvent)
+                    }
+                     
+                 }
+>>>>>>> Stashed changes
 
                     
                 }
