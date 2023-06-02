@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var circleFrame: CGFloat = 450
+    @State var circleFrame: CGFloat = 220
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var cycles: FetchedResults<CycleInfos>
     @ObservedObject var calendar = CalendarViewModel()
@@ -18,36 +18,48 @@ struct ContentView: View {
     @State var startDate = Date.now
     @State var endDate = Date()
     var body: some View {
-        VStack {
-            Slider()
+        ZStack{
+            Image("background")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
             VStack {
-                CircularProgressView(circleFrame: $circleFrame)
-                    .onAppear {
-                    let cycleInfo = CycleInfos(context: moc)
-                    cycleInfo.phaseDescription = "a"
-                    cycleInfo.phaseExpandedDescription = "ab"
-                    cycleInfo.phaseName = "c"
-                    try? moc.save()
-
-                    
-                }
-                TextField ("dias que fazem da ultima", text: $daysAfterMenstruation)
-                    .padding()
-                TextField ("duração media", text: $averageDuration)
-                    .padding()
-                TextField ("duraçao do ciclo", text: $averageCycle)
-                    .padding()
+                Slider()
+                Spacer()
+                
             }
-            Button("criar evento", action: {
-//                startDate -= Double(daysAfterMenstruation)!*24*3600
-//                endDate = startDate + Double(averageDuration)!*24*3600
-//                calendar.createEvent(title: "", startDate: startDate, endDate:endDate)
-                calendar.firstLoadElementsToCalendar(daysBefore: Int(daysAfterMenstruation)!, averageMenstruationDuration: Int(averageDuration)!, averageCycleDuration: Int(averageCycle)!)
-            })
+                VStack {
+                    HStack (spacing: 70) {
+                         Spacer()
+                         CircularProgressView(circleFrame: $circleFrame)
+                             .onAppear {
+                                 let cycleInfo = CycleInfos(context: moc)
+                                 cycleInfo.phaseDescription = "a"
+                                 cycleInfo.phaseExpandedDescription = "ab"
+                                 cycleInfo.phaseName = "c"
+                                 try? moc.save()
+                             }
+                             .padding()
+                         VStack (spacing: 8){
+                             Text ("Você está na menstruação.")
+                                 .font(.system(size: 36, weight: .heavy))
+                                 .foregroundColor(.red)
+                                 .frame(maxWidth: .infinity, alignment: .leading)
+                             Text ("Níveis mais baixos de energia, capacidade de concentração e produtividade. Reduza tarefas de trabalho e administrativas em geral, e evite a pressão de prazos inflexíveis." + "\n" + "\n" + "Níveis mais baixos de energia, capacidade de concentração e produtividade. Reduza tarefas de trabalho e administrativas em geral, e evite a pressão de prazos inflexíveis.")
+                                 .font(.system(size: 14, weight: .light, design: .rounded))
+                                 .frame(maxWidth: .infinity, alignment: .leading)
+                                 .foregroundColor(CustomColor.persianIndigo)
+                         }
+                     }
+                     
+                 }
+
         }
         .environmentObject(calendar)
-        .padding()
+        .background(.white)
+            
+        
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {

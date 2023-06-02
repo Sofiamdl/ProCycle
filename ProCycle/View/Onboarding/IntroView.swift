@@ -66,12 +66,7 @@ struct IntroView: View {
 }
 
 
-struct CustomColor {
-    static let rustyRed = Color("rustyRed")
-    static let notWhite = Color("notWhite")
-    static let persianIndigo = Color("persianIndigo")
-    static let lightGrey = Color("lightGrey")
-}
+
 
 struct IntroView_Previews: PreviewProvider {
     static var previews: some View {
