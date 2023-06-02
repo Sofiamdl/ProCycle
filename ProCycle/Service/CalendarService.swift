@@ -40,6 +40,7 @@ struct CalendarService{
     func newCalendar() -> EKCalendar {
         let calendar = EKCalendar(for: .event, eventStore: eventStore)
         calendar.title = "Luna"
+        calendar.color = .purple
         guard let source = self.bestPossibleEKSource() else {
             return EKCalendar()
         }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MenstruationView: View {
     @State private var question: Int = 1
-    
+    @AppStorage("menstruationDuration") private var menstruationDuration = 0
+
     var body: some View {
         ZStack{
             CustomColor.notWhite
@@ -65,6 +66,9 @@ struct MenstruationView: View {
                 Text("Continuar")
                     .font(.system(size: 20, weight: .semibold, design: .rounded))
                     .foregroundColor(CustomColor.notWhite)
+            }
+            .onTapGesture {
+                menstruationDuration = question
             }
             .buttonStyle(.borderless)
             .padding(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20))

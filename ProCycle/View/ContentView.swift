@@ -13,13 +13,17 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var cycles: FetchedResults<CycleInfos>
     @ObservedObject var calendar = CalendarViewModel()
-    @State var daysAfterMenstruation = "15"
-    @State var averageDuration = "5"
-    @State var averageCycle = "28"
+    @State var daysAfterMenstruation = 3
+    @State var averageDuration = 6
+    @State var averageCycle = 28
     @State var startDate = Date.now
     @State var endDate = Date()
     
 
+    init() {
+        calendar.firstLoadElementsToCalendar(daysBefore: daysAfterMenstruation, averageMenstruationDuration: averageDuration, averageCycleDuration: averageCycle)
+    }
+    
     var body: some View {
         ZStack{
             Image("background")
@@ -67,6 +71,11 @@ struct ContentView: View {
                 }
         .environmentObject(calendar)
         .background(.white)
+        .onAppear() {
+            calendar.days = []
+            calendar.loadEventsOfCalendar()
+        }
+        .offset(x: -105)
             
         
     }
