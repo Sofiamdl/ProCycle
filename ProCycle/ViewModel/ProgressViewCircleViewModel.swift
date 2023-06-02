@@ -13,15 +13,22 @@ class ProgressCircleViewModel: ObservableObject {
     @Published var degreesPerDay: Double
     @Published var todayInCycle: Int
     
+  
+    
     var dateTrack = DateTrack()
     
-    init(cycleDuration: Int = 28, periodDuration: Int = 6, accumulatedValue: Double = 12.8, aux: Double = 12.8, todayInCycle: Int = 7, dateTrack: DateTrack = DateTrack()) {
-        self.cycleDuration = cycleDuration
-        self.periodDuration = periodDuration
+    init(accumulatedValue: Double = 12.8, aux: Double = 12.8, dateTrack: DateTrack = DateTrack()) {
+        @AppStorage("initialDate")  var initialDate = 0
+        @AppStorage("menstruationDuration")  var menstruationDuration = 1
+        @AppStorage("cicleDuration")  var cicleDuration = 28
+        print("aaaa")
+        print(cicleDuration)
+        self.cycleDuration = cicleDuration
+        self.periodDuration = menstruationDuration
         self.accumulatedDegrees = accumulatedValue
         self.dateTrack = dateTrack
-        self.degreesPerDay = Double(360 / cycleDuration)
-        self.todayInCycle = todayInCycle
+        self.degreesPerDay = Double(360 / cicleDuration)
+        self.todayInCycle = initialDate
         self.accumulatedDegrees = degreesPerDay * Double(todayInCycle)
     }
     

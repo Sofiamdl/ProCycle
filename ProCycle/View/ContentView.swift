@@ -19,8 +19,15 @@ struct ContentView: View {
     @State var startDate = Date.now
     @State var endDate = Date()
     
+    @AppStorage("initialDate") private var initialDate = 0
+    @AppStorage("menstruationDuration") private var menstruationDuration = 1
+    @AppStorage("cicleDuration") private var cicleDuration = 28
+    
 
     init() {
+        print(initialDate)
+        print(menstruationDuration)
+        print(cicleDuration)
         calendar.firstLoadElementsToCalendar(daysBefore: daysAfterMenstruation, averageMenstruationDuration: averageDuration, averageCycleDuration: averageCycle)
     }
     

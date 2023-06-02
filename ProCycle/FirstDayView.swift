@@ -51,7 +51,6 @@ struct FirstDayView: View {
                 VStack (spacing: 50){
                     DatePicker("", selection: $date, in: ...Date(), displayedComponents: [.date])
                         .accentColor(CustomColor.persianIndigo)
-                    
                         .datePickerStyle(.compact)
                         .padding(10)
                         .frame(width: 400)

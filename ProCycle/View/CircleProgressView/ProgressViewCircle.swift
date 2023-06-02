@@ -65,7 +65,7 @@ struct CircularProgressView: View {
                                 .foregroundColor(CustomColor.persianIndigo)
                                 .font(.system(size:12))
                         //add o dia do ciclo aqui!!!!!!
-                        Text("02")
+                            Text(String(viewModel.todayInCycle))
                             .foregroundColor(CustomColor.persianIndigo)
                             .font(.system(size:40,weight: .heavy))
                         }
