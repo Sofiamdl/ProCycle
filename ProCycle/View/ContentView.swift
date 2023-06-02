@@ -75,7 +75,7 @@ struct ContentView: View {
             calendar.days = []
             calendar.loadEventsOfCalendar()
         }
-        .offset(x: -105)
+    
             
         
     }
