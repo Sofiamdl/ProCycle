@@ -26,6 +26,7 @@ struct ContentView: View {
                 Slider()
                 Spacer()
             }
+            
                 VStack {
                     Spacer()
                     Spacer()

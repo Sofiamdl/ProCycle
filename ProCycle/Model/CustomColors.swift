@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 struct CustomColor {
-    static let persianIndigo = Color("Persian Indigo")
-    static let rustyRed = Color ("Rusty Red")
-    static let lightGrey = Color ("Light Grey")
+    static let rustyRed = Color("rustyRed")
+    static let notWhite = Color("notWhite")
+    static let persianIndigo = Color("persianIndigo")
+    static let lightGrey = Color("lightGrey")
     static let brightBlue = Color ("Bright Blue")
 }

@@ -9,36 +9,43 @@ import SwiftUI
 
 struct WhyView: View {
     
-    @EnvironmentObject private var coordinator: Coordinator
     
     var window = NSScreen.main?.visibleFrame
     var body: some View {
         ZStack{
-            Color.purple
+            CustomColor.notWhite
+            
+            Image("background")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
-            VStack{
+            
+            VStack (spacing: 10){
     
                 Text("Por que usamos o calendar?")
-                    .font(.system(size: window!.width / 50, weight: .semibold, design: .rounded))
-                    .foregroundColor(.black)
+                    .font(.system(size: 40, weight: .bold, design: .default))
+                    .foregroundColor(CustomColor.rustyRed)
                     .multilineTextAlignment(.center)
-                    //.frame()
                 
                 
                 Text("Para que seja possível fazer a integração com o Calendário da Apple, precisamos ter acesso a ele. Ao nos fornecer esse acesso, todas as atividades que você criar e as fases do seu ciclo menstrual estarão visíveis no Calendário automaticamente.")
-                    .font(.system(size: window!.width / 80, weight: .semibold, design: .rounded))
-                    .foregroundColor(.black)
+                    .font(.system(size: 18, weight: .light, design: .rounded))
+                    .foregroundColor(CustomColor.persianIndigo)
                     .multilineTextAlignment(.center)
-                    .frame(width: window!.width / 2, height: window!.height / 6)
+                    .frame(width: window!.width / 2, height: window!.height / 5)
                 
             
-                Text("Continuar")
-                    .font(.system(size: window!.width / 80, weight: .semibold, design: .rounded))
-                    .foregroundColor(.black)
-                    .padding(14)
-                    .background(.white)
-                    .cornerRadius(20)
-                    .frame(width: window!.width / 3, height: window!.height / 6)
+                NavigationLink {
+                                    FirstDayView()
+                                        .navigationBarBackButtonHidden()
+                                } label: {
+                                    Text("Continuar")
+                                        .font(.system(size: 20, weight: .semibold, design: .rounded))
+                                        .foregroundColor(CustomColor.notWhite)
+                                }.buttonStyle(.borderless)
+                                .padding(14)
+                                .background(CustomColor.persianIndigo)
+                                .cornerRadius(20)
                 
             }
         }

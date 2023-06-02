@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A42806F2A21352C00CFA769 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42806E2A21352C00CFA769 /* IntroView.swift */; };
 		3A576CDA2A279C50002C37E9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A576CD92A279C50002C37E9 /* Coordinator.swift */; };
 		3A576CDC2A279F32002C37E9 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A576CDB2A279F32002C37E9 /* CoordinatorView.swift */; };
-		3AC1B5FB2A2143D900C7FC97 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1B5FA2A2143D900C7FC97 /* AboutView.swift */; };
-		3AC1B5FD2A214BE300C7FC97 /* WhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */; };
+		3A576CEE2A291613002C37E9 /* FirstDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A576CED2A291613002C37E9 /* FirstDayView.swift */; };
+		5B179E482A299B1000D44D2C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B179E472A299B1000D44D2C /* AboutView.swift */; };
+		5B179E4A2A299B2B00D44D2C /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B179E492A299B2B00D44D2C /* IntroView.swift */; };
+		5B179E4C2A299B8200D44D2C /* WhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B179E4B2A299B8200D44D2C /* WhyView.swift */; };
 		5B87F3D12A2679F70000635D /* MonthCycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D02A2679F70000635D /* MonthCycleService.swift */; };
 		5B87F3D32A27C9CF0000635D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D22A27C9CF0000635D /* ContentView.swift */; };
 		5B87F3D62A2912290000635D /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87F3D52A2912290000635D /* CustomColors.swift */; };
@@ -33,14 +34,17 @@
 		BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */; };
 		BF977EBF2A2151B60098BC6E /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EBE2A2151B60098BC6E /* CalendarService.swift */; };
 		BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EC02A2151BE0098BC6E /* EventService.swift */; };
+		EBC2BAB22A296F8100DB4E10 /* DayStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2BAB12A296F8100DB4E10 /* DayStepperView.swift */; };
+		EBC2BAB42A298AF500DB4E10 /* MenstruationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2BAB32A298AF500DB4E10 /* MenstruationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A42806E2A21352C00CFA769 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		3A576CD92A279C50002C37E9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3A576CDB2A279F32002C37E9 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
-		3AC1B5FA2A2143D900C7FC97 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyView.swift; sourceTree = "<group>"; };
+		3A576CED2A291613002C37E9 /* FirstDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDayView.swift; sourceTree = "<group>"; };
+		5B179E472A299B1000D44D2C /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		5B179E492A299B2B00D44D2C /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		5B179E4B2A299B8200D44D2C /* WhyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyView.swift; sourceTree = "<group>"; };
 		5B87F3D02A2679F70000635D /* MonthCycleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCycleService.swift; sourceTree = "<group>"; };
 		5B87F3D22A27C9CF0000635D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5B87F3D52A2912290000635D /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		BF977EBE2A2151B60098BC6E /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		BF977EC02A2151BE0098BC6E /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		EBC2BAB12A296F8100DB4E10 /* DayStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStepperView.swift; sourceTree = "<group>"; };
+		EBC2BAB32A298AF500DB4E10 /* MenstruationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenstruationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +86,9 @@
 		5B87F3D42A27E8350000635D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				3A42806E2A21352C00CFA769 /* IntroView.swift */,
-				3AC1B5FA2A2143D900C7FC97 /* AboutView.swift */,
-				3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */,
+				5B179E472A299B1000D44D2C /* AboutView.swift */,
+				5B179E492A299B2B00D44D2C /* IntroView.swift */,
+				5B179E4B2A299B8200D44D2C /* WhyView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -147,6 +153,9 @@
 				BF977EA42A1E86A10098BC6E /* Components */,
 				BF977EB72A2131120098BC6E /* ViewModel */,
 				BF977E952A1E83D60098BC6E /* ProCycleApp.swift */,
+				3A576CED2A291613002C37E9 /* FirstDayView.swift */,
+				EBC2BAB32A298AF500DB4E10 /* MenstruationView.swift */,
+				EBC2BAB12A296F8100DB4E10 /* DayStepperView.swift */,
 				BF977E992A1E83D70098BC6E /* Assets.xcassets */,
 				BF977E9E2A1E83D70098BC6E /* ProCycle.entitlements */,
 				BF977E9B2A1E83D70098BC6E /* Preview Content */,
@@ -266,21 +275,24 @@
 				BCAC04772A1E869D00065302 /* ProgressViewCircle.swift in Sources */,
 				BCAC04792A1E8C9700065302 /* DateTracking.swift in Sources */,
 				BCAC04872A21408100065302 /* DataController.swift in Sources */,
+				5B179E4C2A299B8200D44D2C /* WhyView.swift in Sources */,
 				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
 				BCAC048A2A2140C300065302 /* CycleInfo.xcdatamodeld in Sources */,
 				BCAC04852A21323A00065302 /* User.swift in Sources */,
+				5B179E482A299B1000D44D2C /* AboutView.swift in Sources */,
 				BF977EAD2A1E92380098BC6E /* SliderCellModel.swift in Sources */,
-				3AC1B5FD2A214BE300C7FC97 /* WhyView.swift in Sources */,
 				BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */,
+				EBC2BAB42A298AF500DB4E10 /* MenstruationView.swift in Sources */,
 				BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */,
 				BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */,
-				3AC1B5FB2A2143D900C7FC97 /* AboutView.swift in Sources */,
+				EBC2BAB22A296F8100DB4E10 /* DayStepperView.swift in Sources */,
 				BCAC048C2A27D8A700065302 /* Cycle.swift in Sources */,
 				BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */,
+				3A576CEE2A291613002C37E9 /* FirstDayView.swift in Sources */,
 				5B87F3D62A2912290000635D /* CustomColors.swift in Sources */,
-				3A42806F2A21352C00CFA769 /* IntroView.swift in Sources */,
 				3A576CDA2A279C50002C37E9 /* Coordinator.swift in Sources */,
 				3A576CDC2A279F32002C37E9 /* CoordinatorView.swift in Sources */,
+				5B179E4A2A299B2B00D44D2C /* IntroView.swift in Sources */,
 				BF977EB12A1EA8880098BC6E /* SliderCellViewModel.swift in Sources */,
 				5B87F3D32A27C9CF0000635D /* ContentView.swift in Sources */,
 				BF977E962A1E83D60098BC6E /* ProCycleApp.swift in Sources */,
