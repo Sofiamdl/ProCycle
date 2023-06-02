@@ -33,6 +33,7 @@
 		BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */; };
 		BF977EBF2A2151B60098BC6E /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EBE2A2151B60098BC6E /* CalendarService.swift */; };
 		BF977EC12A2151BE0098BC6E /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF977EC02A2151BE0098BC6E /* EventService.swift */; };
+		EBC2BAB22A296F8100DB4E10 /* DayStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2BAB12A296F8100DB4E10 /* DayStepperView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		BF977EB52A1FE6FD0098BC6E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		BF977EBE2A2151B60098BC6E /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		BF977EC02A2151BE0098BC6E /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		EBC2BAB12A296F8100DB4E10 /* DayStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStepperView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				3AC1B5FA2A2143D900C7FC97 /* AboutView.swift */,
 				3AC1B5FC2A214BE300C7FC97 /* WhyView.swift */,
 				3A576CED2A291613002C37E9 /* FirstDayView.swift */,
+				EBC2BAB12A296F8100DB4E10 /* DayStepperView.swift */,
 				BF977E992A1E83D70098BC6E /* Assets.xcassets */,
 				BF977E9E2A1E83D70098BC6E /* ProCycle.entitlements */,
 				BF977E9B2A1E83D70098BC6E /* Preview Content */,
@@ -291,6 +294,7 @@
 				BF977EB62A1FE6FD0098BC6E /* CalendarViewModel.swift in Sources */,
 				BF977EA62A1E86B00098BC6E /* Slider.swift in Sources */,
 				3AC1B5FB2A2143D900C7FC97 /* AboutView.swift in Sources */,
+				EBC2BAB22A296F8100DB4E10 /* DayStepperView.swift in Sources */,
 				BCAC048C2A27D8A700065302 /* Cycle.swift in Sources */,
 				BF977EA92A1E877A0098BC6E /* SliderCell.swift in Sources */,
 				3A576CEE2A291613002C37E9 /* FirstDayView.swift in Sources */,
