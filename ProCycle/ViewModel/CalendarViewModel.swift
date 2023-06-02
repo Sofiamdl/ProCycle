@@ -16,11 +16,6 @@ class CalendarViewModel: ObservableObject {
     private var eventService: EventService
     
     init() {
-        /// colocar isso em uma tela inicial
-        eventStore.requestAccess(to: .event) { success, error in
-            print(success)
-        }
-        ///
         self.calendar = CalendarService(eventStore: eventStore)
         self.eventService = EventService(eventStore: eventStore)
         loadEventsOfCalendar()
@@ -37,7 +32,10 @@ class CalendarViewModel: ObservableObject {
             if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)] != nil {
                 if dicEvents[modifiedDate.formatted(date: .complete, time: .omitted)]?.title == "🩸 Menstruação" {
                     days.append(SliderCellModel(phase: .menstruation, day: modifiedDate))
+                } else {
+                    days.append(SliderCellModel(phase: .none, day: modifiedDate))
                 }
+
             }
             else {
                 days.append(SliderCellModel(phase: .none, day: modifiedDate))

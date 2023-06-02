@@ -27,7 +27,7 @@ struct CalendarService{
     func getCalendar() -> EKCalendar {
         let calendars = eventStore.calendars(for: .event)
         let cicleCalendar = calendars.filter { calendar in
-            return calendar.title == "Cicle"
+            return calendar.title == "Luna"
         }
         
         if cicleCalendar.count != 0 {
@@ -39,7 +39,7 @@ struct CalendarService{
     
     func newCalendar() -> EKCalendar {
         let calendar = EKCalendar(for: .event, eventStore: eventStore)
-        calendar.title = "Cicle"
+        calendar.title = "Luna"
         guard let source = self.bestPossibleEKSource() else {
             return EKCalendar()
         }

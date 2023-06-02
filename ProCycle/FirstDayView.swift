@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import EventKit
 
 struct FirstDayView: View {
     
@@ -17,6 +18,14 @@ struct FirstDayView: View {
         formatter.dateStyle = .short
         return formatter
     }()
+    
+    init() {
+
+        let eventStore = EKEventStore()
+        eventStore.requestAccess(to: .event) { success, error in
+            print(success)
+        }
+    }
     
     var body: some View {
         
