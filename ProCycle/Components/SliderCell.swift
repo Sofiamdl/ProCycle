@@ -25,13 +25,19 @@ struct SliderCell: View {
                     .padding(.top, 6)
             }
             .frame(height: 100)
+            
             .onTapGesture  {
-                if day.phase == .menstruation {
-                    day.phase = .none
+                if day.day <= Date() {
+                    
+                    if day.phase == .menstruation {
+                        day.phase = .none
+                    } else {
+                        day.phase = .menstruation
+                    }
+                    calendar.adjustEventsInCalendarBy(menstruationDate: day.day)
                 } else {
-                    day.phase = .menstruation
+                    calendar.showingAlert = true
                 }
-                calendar.adjustEventsInCalendarBy(menstruationDate: day.day)
                 
             }
             Text(viewModel.getDate(date: day.day))

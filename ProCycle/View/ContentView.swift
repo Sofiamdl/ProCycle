@@ -62,6 +62,9 @@ struct ContentView: View {
             .ignoresSafeArea(.all)
 
         }
+        .alert("Você só pode marcar em dias que já passaram", isPresented: $calendar.showingAlert) {
+                    Button("OK", role: .cancel) { }
+                }
         .environmentObject(calendar)
         .background(.white)
             
